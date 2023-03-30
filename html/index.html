@@ -4,31 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="/componentes/navbar.js" type="text/javascript" defer></script>
+    <script src="/componentes/navbar-1.js" type="text/javascript" defer></script>
     <title>Home</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <section>
-        <header>
+        <header class="header-index">
             <h1 class="name-shop">ShortFilms</h1>
-            <nav>
-                <label for="uf"> padpa<br>
+            <nav class="navigation-index">
+                <label for="languages" class="languages-index">
                     <select name="uf" id="uf">
-                        <option value="pt">Português</option>
-                        <option value="eu">English</option>
-                        <option value="sp">Español</option>
+                        <option  value="pt">Português</option>
+                        <option  value="eu">English</option>
+                        <option  value="sp">Español</option>
                     </select>
                     <br>
                 </label>
-                <button class="register"><a href="#"></a></button>
+                <button class="btn-register"><a href="#">Log in
+                </a></button>
             </nav>
         </header>
-        <div class="main-1">
+        <div class="main-index-page">
             <h1></h1>
             <h2></h2>
             <h2></h2>
-            <input class="btn-text" type="text">
-            <input type="button" value="">
+            <form action="">
+            <input class="btn-text" type="email">
+            <input type="submit" value="Enviar">
+            </form>
         </div>
     </section>
 </body>
