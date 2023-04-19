@@ -160,7 +160,6 @@ body{
     width: 40%;
     height: 100px;
     background-color: rgb(217, 217, 217,0.2);
-    box-shadow: 0 4px 4px var(--black);
     border: none;
     border-radius: 15px;
     font-size: 36px;
@@ -179,7 +178,6 @@ body{
     margin-left: 3%;
     width: 10%;
     height: 100px;
-    box-shadow: 0 4px 4px var(--black);
     border: none;
     border-radius: 15px;
     transition: .3s ease-in;
@@ -201,19 +199,31 @@ body{
 .line-container{
     width: 100%;
     height: 50px;
-    box-shadow: 0 4px 4px var(--black);
     background-color: var(--dark-gray);
 }
 
 .container-index-itens{
-    padding: 5rem;
+    height: 100%;
+    width: 100%;
     display: flex;
+    align-items: center;
+}
+
+.container-index-itens-padding{
+    padding: 3rem;
+    display: flex;
+
 }
 
 .container-index-itens-left,.container-index-itens-right{
     width: 50%;
     height: 100%;
 }
+.container-index-itens-left,.container-index-itens-right h1{
+    color: var(--lightgray);
+    font-family: var(--Poppins),sans-serif;
+    font-size: 3em;
+}     
 
 .img-left,.img-right{
     display: flex;
