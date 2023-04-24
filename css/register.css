@@ -51,6 +51,7 @@ div.box h1 {
  div.box .input_text {
     padding: 10px 10px;
     width: 200px;
+    color: #000000;
     background-color: #ffffff ;
     border-bottom: 1px double #151516;
     border-top: 1px double black;
