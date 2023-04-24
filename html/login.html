@@ -9,9 +9,33 @@
     <script src="/components/Backgrounds/background-gradient.js"></script>
 </head>
 <body>
-    <background-gradient></background-gradient>
-    <div class="caixote">
-    <h1>audhaiudha9dadqhuiffu</h1>
-    </div>
+    <h1>Logo</h1>
+    <form action="">
+        <!-- Headings for the form -->
+        <div class="headingsContainer">
+            <h3>ShortFilms</h3>
+        </div>
+        <!-- Main container for all inputs -->
+        <div class="mainContainer">
+            <!-- Username -->
+            <label for="username">Usuário</label>
+            <input type="text" placeholder="Digite seu nome de usuário" name="username" required>
+            <br><br>
+            <!-- Password -->
+            <label for="pswrd">Senha</label>
+            <input type="password" placeholder="Digite sua senha" name="pswrd" required>
+            <!-- sub container for the checkbox and forgot password link -->
+            <div class="subcontainer">
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Lembrar
+                </label>
+                <p class="forgotpsd"> <a href="#">Esqueceu sua senha?</a></p>
+            </div>
+            <!-- Submit button -->
+            <button type="submit">Login</button>
+            <!-- Sign up link -->
+            <p class="register">Ainda não é um membro? <a href="#">Registre-se aqui!</a></p>
+        </div>
+    </form>
 </body>
 </html>
