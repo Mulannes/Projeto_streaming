@@ -8,7 +8,7 @@ body {
     top: 50px;
     left: 400px;
     font: 100% normal Arial;
-    background: url(arte.jpg)no-repeat;
+    background-color: #000000;
     background-size: cover;
     ;
 }
