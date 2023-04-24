@@ -1,0 +1,97 @@
+*{
+    margin: 3;
+    padding: 3;
+}
+
+body {
+    position: fixed ;
+    top: 50px;
+    left: 400px;
+    font: 100% normal Arial;
+    background: url(arte.jpg)no-repeat;
+    background-size: cover;
+    ;
+}
+
+form, input, select, textarea {
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+}
+
+div.box {
+    margin: 0 auto;
+    width: 500px;
+    height: 500px;
+    background: #260067;
+    top: 50px;
+    border: 5px solid #310047c2;
+    
+}
+
+div.box label{
+
+    width: 100%;
+    display: block;
+    background: #000b49    ;
+    border-top:1px solid #1a1d27;
+    border-bottom: 1px solid #1a1d27;
+    padding: 30px 0 30px 0;
+}
+div.box h1 {
+    color: #ffffff;
+    font-size: 30px;   
+    text-transform: none;
+    padding: 0 0 0 190px;
+    
+    /* border-bottom: 1px solid #1a1d27;
+    border-top: 1px solid#ffffff; */
+}
+
+ div.box .input_text {
+    padding: 10px 10px;
+    width: 200px;
+    background-color: #ffffff ;
+    border-bottom: 1px double #151516;
+    border-top: 1px double black;
+    border-left: 1px double black;
+    border-right: 1px double black;
+ }
+ div.box .button{
+     margin: 0 0 10px 0;
+     /* padding: 25px 0px; */
+    background-color: green    ;
+    border: 0px;
+    position: relative;
+    top: 10px;
+    left: 30%;
+    height: 60px;
+    width: 200px;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-bottom: 1px double #ffffff;
+    border-top: 1px double #ffffff;
+    border-left: 1px double #ffffff;
+    border-right: 1px double #ffffff;
+ }
+ div.box #mensagem {
+    background-color: #333333 ;
+    border-bottom: 1px double #000000;
+    border-top: 1px double#000000;
+    border-left: 1px double #000000;
+    border-right: 1px double #000000;
+    padding: 7px 7px;
+    width: 210px;
+    height: 25px;
+    /* overflow: hidden; */
+ }
+ div.box label span {
+    color: #ffffff;
+    font-size: 12px;
+    width: 100px;
+    padding: 5px 20px 0 0;
+    display: block;
+    text-align: right;
+    float: left;
+
+}

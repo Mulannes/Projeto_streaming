@@ -1,14 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
-    <script src="/components/Backgrounds/background-gradient.js"></script>
-    <link rel="stylesheet" href="/css/register.css">
+<html aria-label="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale">
+        <title>formulario de contato:</title>
+        <link rel="stylesheet" href="registro.css">
 </head>
 <body>
-    <background-gradient></background-gradient>
+    <form action="coloca o link para o menu principal">
+        <div class="box">
+            <h1>Registro</h1>
+            
+            <label for="Email">
+                <span> Endereço de email:</span>
+                <input type="email" name="Email" 
+                class="input_text" id="email" required>
+            </label>
+
+            <label for="Nome">
+                <span>Nome completo:</span>
+                <input type="text" name="Nome"
+                class="input_text" id="nome" required>
+            </label>
+
+            <label for="Senha">
+                <span>Senha:</span>
+                <input type="password" name="Senha" 
+                class="input_text" id="senha" required>
+            </label>
+            <label for="Mensagem">
+                <input type="submit" value="Cadastre-se"
+                class="button" required>
+            </label>
+          
+            
+        </div>
+    </form>
+
 </body>
 </html>
