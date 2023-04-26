@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@400;500;600;700&display=swap');
+
+:root{
+    --gray: #3C3838;
+    --lightgray:#D9D9D9;
+    --black: #000;
+    --green-btn: #428C85;
+    --purple: #7338E6;
+    --dark-gray: #514D4D;
+    --Poppins:"Poppins";
+    --gold:#FFD700;
+    --diamond:#00FFFF;
+}
+
+.main{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+}
+
+.main-itens{
+    width: 70%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.area{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.silver > div {
+    width: 90%;
+    height: 70%;
+    background-color: var(--lightgray);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.gold > div{
+    width: 100%;
+    height: 90%;
+    background-color: var(--purple);
+    position: absolute;
+    bottom: 0;
+}
+
+.diamond > div{
+    width: 90%;
+    height: 70%;
+    background-color: var(--lightgray);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.planos-advantages{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.planos-advantages > table{
+    margin-top: 300px;
+    color: var(--lightgray);
+    width: 60%;
+    font-size: 1.5em;
+}
+
+.planos-advantages > table > tbody > tr{
+    width: 15%;
+}
+
+.planos-advantages > table{
+
+}
+
+#silver{
+    background-color: var(--lightgray);
+}
+
+#gold{
+    background-color: var(--gold);
+}
+
+#diamond{
+    background-color: var(--diamond);
+}
+
+.cube{
+    width: ;
+    height: ;
+}
