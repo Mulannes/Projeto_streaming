@@ -1,98 +1,79 @@
-*{
-    margin: 3;
-    padding: 3;
+html,body{height: 100%; box-sizing: border-box;}
+
+body 
+{
+  font-family:sans-serif; 
+  background: linear-gradient(to top, #428c85, #7338e6); 
+  display: flex;
+  overflow: hidden;
 }
 
-body {
-    position: fixed ;
-    top: 50px;
-    left: 400px;
-    font: 100% normal Arial;
-    background-color: #000000;
-    background-size: cover;
-    ;
+form{
+    width: 30%;
+    height: 90%;
+    margin: auto;
+    color:white;
+    backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(11, 15, 13, 0.582);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    padding: 20px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
-form, input, select, textarea {
-    margin: 0;
-    padding: 0;
-    color: #ffffff;
+img {
+  width: 60px;
+  height: 60px;
+  margin: 5px 0px 0px 5px;
+  position: absolute;
 }
 
-div.box {
-    margin: 0 auto;
-    width: 500px;
-    height: 500px;
-    background: #260067;
-    top: 50px;
-    border: 5px solid #310047c2;
-    
-}
-
-div.box label{
-
+input[type=text], input[type=password], input[type=email]{
     width: 100%;
-    display: block;
-    background: #000b49    ;
-    border-top:1px solid #1a1d27;
-    border-bottom: 1px solid #1a1d27;
-    padding: 30px 0 30px 0;
-}
-div.box h1 {
-    color: #ffffff;
-    font-size: 30px;   
-    text-transform: none;
-    padding: 0 0 0 190px;
-    
-    /* border-bottom: 1px solid #1a1d27;
-    border-top: 1px solid#ffffff; */
+    margin: 10px 0;
+    border-radius: 5px;
+    padding: 15px 18px;
+    box-sizing: border-box;
+  }
+
+button {
+    background-color: #428C85;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 5px;
+    margin: 7px 0;
+    width: 100%;
+    font-size: 18px;
+  }
+
+button:hover {
+    opacity: 0.6;
+    cursor: pointer;
 }
 
- div.box .input_text {
-    padding: 10px 10px;
-    width: 200px;
-    color: #000000;
-    background-color: #ffffff ;
-    border-bottom: 1px double #151516;
-    border-top: 1px double black;
-    border-left: 1px double black;
-    border-right: 1px double black;
- }
- div.box .button{
-     margin: 0 0 10px 0;
-     /* padding: 25px 0px; */
-    background-color: green    ;
-    border: 0px;
-    position: relative;
-    top: 10px;
-    left: 30%;
-    height: 60px;
-    width: 200px;
-    font-size: 30px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    border-bottom: 1px double #ffffff;
-    border-top: 1px double #ffffff;
-    border-left: 1px double #ffffff;
-    border-right: 1px double #ffffff;
- }
- div.box #mensagem {
-    background-color: #333333 ;
-    border-bottom: 1px double #000000;
-    border-top: 1px double#000000;
-    border-left: 1px double #000000;
-    border-right: 1px double #000000;
-    padding: 7px 7px;
-    width: 210px;
-    height: 25px;
-    /* overflow: hidden; */
- }
- div.box label span {
-    color: #ffffff;
-    font-size: 12px;
-    width: 100px;
-    padding: 5px 20px 0 0;
-    display: block;
-    text-align: right;
-    float: left;
-
+.headingsContainer{
+    text-align: center;
 }
+
+.headingsContainer p{
+    color: gray;
+}
+.mainContainer{
+    padding: 8px;
+}
+
+.register{
+    color: white;
+    text-align: center;
+  }
+  
+.register a{
+    color: cornflowerblue;
+  }
+  
+.register a:link{
+    text-decoration: none;
+  }

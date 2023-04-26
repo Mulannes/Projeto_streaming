@@ -1,45 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
-    <script src="/components/Backgrounds/background-gradient.js"></script>
     <link rel="stylesheet" href="/css/register.css">
-<html aria-label="pt-BR">
+    <title>SignUp ShortFilms</title>
 </head>
+
 <body>
+    <img src="\assets\logosfb.png">
+    <form action="">
+        <!-- Heading -->
+        <div class="headingsContainer">
+            <h1>Cadastro<h1>
+        </div>
 
-    <form action="coloca o link para o menu principal">
-        <div class="box">
-            <h1>Registro</h1>
+        <!-- Main container -->
+        <div class="mainContainer">
+            <!-- Nome de Usuario -->
+            <label for="username">Usuário</label>
+            <input type="text" placeholder="Digite seu nome de usuário" name="username" required>
 
-            <label for="Email">
-                <span> Endereço de email:</span>
-                <input type="email" name="Email" 
-                class="input_text" id="email" required>
-            </label>
+            <br><br>
 
-            <label for="Nome">
-                <span>Nome completo:</span>
-                <input type="text" name="Nome"
-                class="input_text" id="nome" required>
-            </label>
+            <!-- Email -->
+            <label for="email">E-Mail</label>
+            <input type="email" placeholder="Digite seu e-mail" name="email" required>
+            
+            <br><br>
 
-            <label for="Senha">
-                <span>Senha:</span>
-                <input type="password" name="Senha" 
-                class="input_text" id="senha" required>
-            </label>
-            <label for="Mensagem">
-                <input type="submit" value="Cadastre-se"
-                class="button" required>
-            </label>
+            <!-- Senha -->
+            <label for="pswrd">Senha</label>
+            <input type="password" placeholder="Digite sua senha" name="pswrd_c" required>
 
+            <br><br>
+
+            <!-- Confirmar Senha -->
+            <label for="pswrdc">Senha</label>
+            <input type="password" placeholder="Confirme sua senha" name="pswrd_c" required>
+
+            <br><br>
+
+            <!-- Enviar -->
+            <button type="submit">Cadastrar</button>
+
+            <!-- Login Page -->
+            <p class="register">Já é um membro? <a href="loginpage.html">Entre aqui!</a></p>
 
         </div>
-    </form>
 
+    </form>
 </body>
+
 </html>
