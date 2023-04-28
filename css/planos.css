@@ -67,33 +67,42 @@
 }
 
 .planos-advantages > table{
-    margin-top: 300px;
+    overflow-x: hidden;
+    margin-top: 7%;
     color: var(--lightgray);
-    width: 60%;
-    font-size: 1.5em;
+    width: 70%;
+    font-size: 2.1em;
 }
 
-.planos-advantages > table > tbody > tr{
-    width: 15%;
+.planos-advantages > table > tbody > tr > td{
+    border-bottom: 2px solid var(--lightgray);
+    padding: 4% 3%;
+
 }
 
 .planos-advantages > table{
-
+    
 }
 
 #silver{
     background-color: var(--lightgray);
+    width: 25%;
+    color: #fff;
 }
 
 #gold{
     background-color: var(--gold);
+    width: 25%;
+    color: #fff;
 }
 
 #diamond{
     background-color: var(--diamond);
+    width: 25%;
+    color: #fff;
 }
 
 .cube{
-    width: ;
-    height: ;
+    width: 100px;
+    height: 75px;
 }
