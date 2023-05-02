@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@400;500;600;700&display=swap');
+
+:root{
+    --gray: #3C3838;
+    --lightgray:#D9D9D9;
+    --black: #000;
+    --green-btn: #428C85;
+    --purple: #7338E6;
+    --dark-gray: #514D4D;
+    --Poppins:"Poppins";
+}
+
+body{
+
+    margin: 0;  
+    background-color: var(--gray);
+}   
+
+#header-home{
+    width: 100vw;
+    height: 100px;
+    background-color: rgb(217, 217, 217, .3);
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.icon-home {
+    width: 100px; 
+    height: 100px;
+}
+
+.navigation-home ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+.navigation-home ul li{
+    list-style-type: none;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.navigation-home ul li a{
+    font-family: var(--Poppins);
+    text-decoration: none;
+    font-size: 2em;
+    color: var(--lightgray);
+}
+
+.navigation-home ul li a::after{
+    content: "";
+}
