@@ -1,0 +1,104 @@
+html,body{height: 100%; margin: 0; padding: 0; box-sizing: border-box;}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@400;500;600;700&display=swap');
+
+:root{
+    --gray: #3C3838;
+    --lightgray:#D9D9D9;
+    --black: #000;
+    --green-btn: #428C85;
+    --purple: #7338E6;
+    --dark-gray: #514D4D;
+    --Poppins:"Poppins";
+}
+
+body{
+    background: linear-gradient(to top, #428c85, #7338e6); 
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+}
+
+#header-home{
+    position: fixed;
+    top: 0;
+    width: 90%;
+    padding: 5px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 99;
+}
+
+.logo {
+    width: 100px; 
+    height: 100px;
+    cursor: pointer;
+}
+
+.navigation-home{
+    display: flex;
+    align-items: center;
+}
+.navigation-home a{
+    position: relative;
+    font-family: var(--Poppins);
+    text-decoration: none;
+    font-size: 1.3em;
+    font-weight: 500;
+    margin-left: 40px;
+    color: var(--lightgray);
+}
+
+.navigation-home a::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -6px;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scale(0);
+    transition: transform .5s;
+}
+.navigation-home a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+#icon-perfil{
+    margin-left: 40px;
+    width: 50px;
+    height: 50px;
+    cursor: crosshair;
+}
+
+.mainContainer{
+    background-color:var(--gray);
+    width: 95%;
+    height: 100%;
+}
+
+.dataContainer{
+    height: 90%;
+    color:white;
+    margin: 150px 40px 0 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+input[type=text], input[type=password]{
+    height: 5%;
+    margin: 10px 0;
+    border-radius: 5px;
+    padding: 15px 18px;
+    box-sizing: border-box;
+  }
+
+.userData1, .userData2, .userData3{
+    display: flex;
+    flex-direction: column;
+}
