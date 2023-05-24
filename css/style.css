@@ -2,48 +2,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@400;500;600;700&display=swap');
 
 
-:root{
+:root {
     --gray: #3C3838;
-    --lightgray:#D9D9D9;
+    --lightgray: #D9D9D9;
     --black: #000;
     --green-btn: #428C85;
     --purple: #7338E6;
     --dark-gray: #514D4D;
-    --Poppins:"Poppins";
+    --Poppins: "Poppins";
 }
 
-*{
+* {
     margin: 0;
 
 }
 
-body{
+body {
     background-color: var(--gray);
     overflow-x: hidden;
 }
 
-.content{
+.content {
     width: 100%;
     height: 100%;
     padding: 5rem 0;
 }
 
-.main-index-content{
+.main-index-content {
     text-align: center;
 }
 
-.main-index-content .text{
-    margin-top:10%;
+.main-index-content .text {
+    margin-top: 10%;
     font-size: 2em;
     font-weight: 600;
     font-family: var(--Poppins);
 }
-.main-index-content .text > h1{
+
+.main-index-content .text>h1 {
     font-size: 3em;
     font-weight: 800;
 }
 
-.main-index-content > form{
+.main-index-content>form {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -51,10 +52,10 @@ body{
 }
 
 
-.btn-text{
+.btn-text {
     width: 40%;
     height: 100px;
-    background-color: rgb(217, 217, 217,0.2);
+    background-color: rgb(217, 217, 217, 0.2);
     border: none;
     border-radius: 15px;
     font-size: 36px;
@@ -63,12 +64,12 @@ body{
     padding-left: 2%;
 }
 
-.btn-text > input{
+.btn-text>input {
     padding-left: 30%;
     border: none;
 }
 
-.btn-submit{
+.btn-submit {
     background-color: var(--green-btn);
     margin-left: 3%;
     width: 10%;
@@ -82,58 +83,73 @@ body{
 }
 
 
-.btn-submit:hover{
+.btn-submit:hover {
     transform: scale(1.10);
     background-color: var(--purple);
 }
 
-.container-index{
+.container-index {
     width: 100%;
     height: 800px;
 }
 
-.line-container{
+.line-container {
     width: 100%;
     height: 50px;
     background-color: var(--dark-gray);
 }
 
-.container-index-itens{
+.container-index-itens {
     height: 100%;
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
-.container-index-itens-padding{
+.container-index-itens-padding {
     padding: 3rem;
     display: flex;
 
 }
 
-.container-index-itens-left,.container-index-itens-right{
+.container-index-itens-left,
+.container-index-itens-right {
     width: 50%;
     height: 100%;
 }
-.container-index-itens-left h1,.container-index-itens-right h1{
-    color: var(--lightgray);
-    font-family: var(--Poppins),sans-serif;
-    font-size: 3em;
-}     
 
-.container-index-itens-left p,.container-index-itens-right p{
+.container-index-itens-left img,
+.container-index-itens-right img {
+    width: 500px;
+    height: 500px;
+
+}
+
+
+.container-index-itens-left h1,
+.container-index-itens-right h1 {
+    color: var(--lightgray);
+    font-family: var(--Poppins), sans-serif;
+    font-size: 3em;
+}
+
+.container-index-itens-left p,
+.container-index-itens-right p {
     font-size: 1.7em;
     margin-top: 6%;
     color: var(--lightgray);
 
 }
 
-.img-left,.img-right{
+.img-left,
+.img-right {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-footer{ 
+footer {
     width: 100%;
     height: 800px;
     background-color: #272323;

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/components/navbar-2.js"></script>
+    <title>Formas-de-Pagamentos</title>
+</head>
+
+<body>
+    <navbar-2></navbar-2>
+    <section>
+        <div class="left">
+            <div id="inline">
+                <p>Forma de Pagamento</p><label for="forma-pagamento">
+                    <select id="Forma_de_pagamento">
+                        <option value="">Selecione a forma de pagamento</option>
+                        <option value="A">Cartão de Crédito</option>
+                        <option value="B">PIX</option>
+                        <option value="C">Boleto bancário</option>
+                    </select>
+                </label>
+            </div>
+            <form action="">
+                <label for="uf">
+                    <input type="checkbox" checked>Desejo receber notificações por e-mail sobre novidades da ShortsFilm.
+                    <input type="checkbox" id="required">Li e aceito o termo e condições do ShortFilms.
+                </label>
+                <button onclick="MudarPag()" id="advance">
+                    Avançar para o pagamento
+                </button>
+            </form>
+        </div>
+        <div class="right">
+
+        </div>
+    </section>
+    <script type="text/javascript">
+
+
+        function MudarPag() {
+            var optPag = document.getElementById("Forma_de_pagamento").value
+            if (optPag === 'A') {
+                window.location.href = '/compras-pages/html/pagamento-boleto.html'
+            } else if (optPag === 'B') {
+                window.location.href = 'pagamento-boleto.html'
+            } else if (optPag === 'C') {
+                window.location.href = 'pagamento-pix.html'
+            } else if (optPag === '') {
+                window.alert('BURRO')
+            } else {
+                window.alert('nada')
+            }
+        }
+    </script>
+</body>
+
+</html>
