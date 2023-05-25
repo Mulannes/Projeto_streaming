@@ -32,13 +32,15 @@
                 <label>
                     <input type="checkbox" id="required">Li e aceito o termo e condições do ShortFilms.
                 </label>
+                <button id="advanced">
+                    Pagar
+                </button>
                 <br>
                 <br>
-                <a id="advance">
-                    <span> Get Ticket</span>
-                    <span> Get Ticket</span>
-                </a>
             </form>
+            <!-- <a class="btn-epic" target="_blank" id="advanced">
+                <div><span>Get Ticket</span><span>Get Ticket</span></div>
+            </a> -->
         </div>
         <div class="right">
             <div class="purple">
@@ -56,7 +58,8 @@
     </section>
     <script type="text/javascript">
 
-        document.getElementById("advance").addEventListener("click", function () {
+        document.getElementById("advanced").addEventListener("click", function (event) {
+            event.preventDefault();
             var optPag = document.getElementById("Forma_de_pagamento").value
             var checkCKD = document.getElementById("required").checked
             console.log(checkCKD)
