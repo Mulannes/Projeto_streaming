@@ -79,15 +79,17 @@ body{
     background-color:var(--gray);
     width: 95%;
     height: 100%;
+    display: flex;
 }
 
 .dataContainer{
+    width: 60%;
     height: 90%;
     color:white;
     margin: 150px 40px 0 40px;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 input[type=text], input[type=password]{
@@ -101,4 +103,39 @@ input[type=text], input[type=password]{
 .userData1, .userData2, .userData3{
     display: flex;
     flex-direction: column;
+}
+
+.Plano{
+    height: 90%;
+    width: 30%;
+    color: white;
+    margin: 150px 40px 0 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    width: 325px;
+    height: 325px;
+}
+
+.espaco{
+    width: 250px;
+    height: 100px;
+}
+
+button {
+    background-color: #428C85;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 5px;
+    margin: 7px 0;
+    width: 100%;
+    font-size: 18px;
+  }
+
+button:hover {
+    opacity: 0.6;
+    cursor: pointer;
 }
