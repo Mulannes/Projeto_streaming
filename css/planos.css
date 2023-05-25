@@ -35,13 +35,22 @@
 }
 
 p{
+    font-family: var(--Poppins);
     color: #fff;
-    font-size: 35px;
+    font-size: 25px;
+}
+h2{
+    padding-left: 225px;
+    padding-top: 100px;
+    font-family: var(--Poppins);
+    color: #fff;
+    font-size: 25px;
 }
 
 span{
-    padding-top: 50px;
-    font-size: 40px;
+    font-family: var(--Poppins);
+    padding-top: 45px;
+    font-size: 30px;
 }
 
 .silver > p {
@@ -52,6 +61,7 @@ span{
 }
 
 .gold > p {
+    font-size: 30px;
     display: flex;
     justify-content: center;
 }
@@ -104,13 +114,15 @@ span{
 
 .planos-advantages > table{
     overflow-x: hidden;
-    margin-top: 250px;
+    margin-top: 125px;
     color: var(--lightgray);
     width: 70%;
     font-size: 2.1em;
 }
 
 .planos-advantages > table > tbody > tr > td{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
     border-bottom: 2px solid var(--lightgray);
     padding: 4% 3%;
 
