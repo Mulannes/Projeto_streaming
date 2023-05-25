@@ -7,11 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="/components/navbar-2.js"></script>
     <title>Formas-de-Pagamentos</title>
+    <link rel="stylesheet" href="/compras-pages/css/forma-pagamento.css">
 </head>
 
 <body>
     <navbar-2></navbar-2>
-    <section>
+    <section id="container">
         <div class="left">
             <div id="inline">
                 <p>Forma de Pagamento</p><label for="forma-pagamento">
@@ -24,36 +25,52 @@
                 </label>
             </div>
             <form action="">
-                <label for="uf">
+                <label>
                     <input type="checkbox" checked>Desejo receber notificações por e-mail sobre novidades da ShortsFilm.
+                </label>
+                <br>
+                <label>
                     <input type="checkbox" id="required">Li e aceito o termo e condições do ShortFilms.
                 </label>
-                <button onclick="MudarPag()" id="advance">
-                    Avançar para o pagamento
-                </button>
+                <br>
+                <br>
+                <a id="advance">
+                    <span> Get Ticket</span>
+                    <span> Get Ticket</span>
+                </a>
             </form>
         </div>
         <div class="right">
-
+            <div class="purple">
+                <h2>Gold</h2>
+                <p>Principal vantagens</p>
+                <ol>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                </ol>
+            </div>
         </div>
     </section>
     <script type="text/javascript">
 
-
-        function MudarPag() {
+        document.getElementById("advance").addEventListener("click", function () {
             var optPag = document.getElementById("Forma_de_pagamento").value
-            if (optPag === 'A') {
-                window.location.href = '/compras-pages/html/pagamento-boleto.html'
-            } else if (optPag === 'B') {
-                window.location.href = 'pagamento-boleto.html'
-            } else if (optPag === 'C') {
-                window.location.href = 'pagamento-pix.html'
-            } else if (optPag === '') {
-                window.alert('BURRO')
+            var checkCKD = document.getElementById("required").checked
+            console.log(checkCKD)
+            if (optPag === 'A' && checkCKD) {
+                window.location.href = '/compras-pages/html/pagamento-cartao-credito.html'
+            } else if (optPag === "B" && checkCKD) {
+                window.location.href = '/compras-pages/html/pagamento-pix.html-'
+            } else if (optPag === "C" && checkCKD) {
+
+                window.location.href = "/compras-pages/html/pagamento-boleto.html"
             } else {
-                window.alert('nada')
+                window.alert("Selecione a Forma de Pagamento")
             }
-        }
+        })
     </script>
 </body>
 
