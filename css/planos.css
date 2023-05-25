@@ -34,9 +34,50 @@
     position: relative;
 }
 
+p{
+    font-family: var(--Poppins);
+    color: #fff;
+    font-size: 25px;
+}
+h2{
+    padding-left: 225px;
+    padding-top: 100px;
+    font-family: var(--Poppins);
+    color: #fff;
+    font-size: 25px;
+}
+
+span{
+    font-family: var(--Poppins);
+    padding-top: 45px;
+    font-size: 30px;
+}
+
+.silver > p {
+    padding-left: 30px;
+    padding-top: 120px;
+    display: flex;
+    justify-content: center;
+}
+
+.gold > p {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.diamond > p {
+    padding-right: 30px;
+    padding-top: 120px;
+    display: flex;
+    justify-content: center;
+}
+
 .silver > div {
     width: 90%;
     height: 70%;
+    display: flex;
+    justify-content: center;
     background-color: var(--lightgray);
     position: absolute;
     bottom: 0;
@@ -46,6 +87,8 @@
 .gold > div{
     width: 100%;
     height: 90%;
+    display: flex;
+    justify-content: center;
     background-color: var(--purple);
     position: absolute;
     bottom: 0;
@@ -54,6 +97,8 @@
 .diamond > div{
     width: 90%;
     height: 70%;
+    display: flex;
+    justify-content: center;
     background-color: var(--lightgray);
     position: absolute;
     bottom: 0;
@@ -69,13 +114,15 @@
 
 .planos-advantages > table{
     overflow-x: hidden;
-    margin-top: 250px;
+    margin-top: 125px;
     color: var(--lightgray);
     width: 70%;
     font-size: 2.1em;
 }
 
 .planos-advantages > table > tbody > tr > td{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
     border-bottom: 2px solid var(--lightgray);
     padding: 4% 3%;
 
