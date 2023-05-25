@@ -46,7 +46,7 @@ span{
 
 .silver > p {
     padding-left: 30px;
-    padding-top: 140px;
+    padding-top: 120px;
     display: flex;
     justify-content: center;
 }
@@ -58,7 +58,7 @@ span{
 
 .diamond > p {
     padding-right: 30px;
-    padding-top: 140px;
+    padding-top: 120px;
     display: flex;
     justify-content: center;
 }
