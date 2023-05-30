@@ -11,7 +11,7 @@
 
 <body>
     <img src="../assets/icons/logo.png">
-    <form action="">
+    <form action="/login" method="post">
         <!-- Heading -->
         <div class="headingsContainer">
             <h1>Login<h1>
@@ -26,8 +26,8 @@
             <br><br>
 
             <!-- Senha -->
-            <label for="pswrd">Senha</label>
-            <input type="password" placeholder="Digite sua senha" name="pswrd" required>
+            <label for="password">Senha</label>
+            <input type="password" placeholder="Digite sua senha" name="password" required>
 
             <!-- Checkbox esqueceu a senha -->
             <div class="subcontainer">
@@ -38,7 +38,7 @@
             </div>
 
             <!-- Enviar -->
-            <button type="submit">Entrar</button>
+            <button type="submit" value="login">Entrar</button>
 
             <!-- Sign-up page -->
             <p class="register">Ainda não é um membro? <a href="register.html">Cadastre-se aqui!</a></p>
