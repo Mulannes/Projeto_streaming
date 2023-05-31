@@ -74,11 +74,22 @@
         </div>
         <div class="Plano">
             <h1>Plano</h1>
-            <img src="../assets/icons/diamond.png">
+            <img id='image' src="../assets/icons/diamond.png">
             <div class="espaco"></div>
-            <button type="submit">Trocar de Plano</button>
+            <button id="buttonPlano" onclick="changeImage()">Trocar de Plano</button>
         </div>
     </div>
+
+    <script type="text/javascript">
+        document.getElementById("buttonPlano").onclick = function () {
+            location.href = "plano-page.html";
+        }
+
+        // function changeImage(){
+        // var img = document.getElementById("image");
+        // img.src="../assets/icons/gold.png";
+        // }
+    </script>
 </body>
 
 </html>
