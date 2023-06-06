@@ -210,7 +210,7 @@ class Header extends HTMLElement {
     }
   </style>
         <header id="header-home">
-        <img src="/assets/icons/logo.png" alt="Logo" class="logo">
+        <a href="/html/filmes.html"><img src="/assets/icons/logo.png" alt="Logo" class="logo"></a>
         <nav class="navigation-home">
             <a href="/html/filmes.html">Filmes</a>
             <a href="#">Categorias</a>

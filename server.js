@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 const path = require('path')
 app.use('/assets', express.static('assets'))
-app.use('componets', express.static('components'))
+app.use('/componets', express.static('components'))
 
 const connection = mysql.createConnection({
     host: '127.0.0.1',
@@ -51,12 +51,9 @@ app.post('/login', (req, res) => {
         } else {
             res.send('email não cadastrado');
         }
-    } else {
-        console.log("Erro: Consulta não realizada", err);
-    }
     });
-res.send('Mandou para o Servidor');
+    res.send('Mandou para o Servidor');
 })
-app.listen(3000, () => {
+app.listen(3307, () => {
     console.log('Servidor rodando na porta 3000!')
 })
