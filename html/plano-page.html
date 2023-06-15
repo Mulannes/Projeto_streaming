@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,28 +9,29 @@
     <script src="/components/navbar-2.js"></script>
     <link rel="stylesheet" href="/css/planos.css">
 </head>
+
 <body>
     <navbar-2></navbar-2>
     <section class="main">
         <div class="main-itens">
-            <div class="area silver">
-                <p><b>Mais Barato</b></p>                
+            <div class="area silver" onclick="silver()">
+                <p><b>Mais Barato</b></p>
                 <div>
                     <span><b>Silver</b></span>
                 </div>
-              
+
             </div>
-            <div class="area gold">
+            <div class="area gold" onclick="gold()">
                 <p><b>Recomendado</b></p>
                 <div>
                     <span><b>Gold</b></span>
                 </div>
             </div>
-            <div class="area diamond">
-                <p><b>Mais Benéfico</b></p> 
+            <div class="area diamond" onclick="diamond()">
+                <p><b>Mais Benéfico</b></p>
                 <div>
                     <span><b>Diamond</b></span>
-                </div>          
+                </div>
             </div>
         </div>
     </section>
@@ -82,5 +84,19 @@
             </tbody>
         </table>
     </section>
+
+    <script>
+        function silver() {
+            window.location.href = '../compras-pages/html/forma-pagamento.html'
+        }
+        function gold() {
+            window.location.href = '../compras-pages/html/forma-pagamento.html'
+        }
+        function diamond() {
+            window.location.href = '../compras-pages/html/forma-pagamento.html'
+        }
+    </script>
+
 </body>
+
 </html>
