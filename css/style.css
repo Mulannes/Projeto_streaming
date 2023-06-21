@@ -70,10 +70,15 @@ body {
 }
 
 .btn-submit {
-    background-color: var(--green-btn);
-    margin-left: 3%;
+    margin-left: 15px;
     width: 10%;
     height: 100px;
+}
+
+.btn-submitB {
+    background-color: var(--green-btn);
+    height: 100px;
+    width: 100%;
     border: none;
     border-radius: 15px;
     transition: .3s ease-in;
@@ -83,7 +88,7 @@ body {
 }
 
 
-.btn-submit:hover {
+.btn-submitB:hover {
     transform: scale(1.10);
     background-color: var(--purple);
 }
