@@ -1,0 +1,31 @@
+h1{
+    color: white;
+    font-size: 70px;
+    font-family: var(--Poppins);
+    
+}
+#posição{
+position: relative;
+height: 440px;
+display : flex;
+align-items : center;
+justify-content : center;
+}
+p{    
+    width: 250px;
+    border: 10px;
+    font-size: 50px;
+    background-color: aliceblue;
+    display: block;
+    text-align: center;
+}
+#botão{
+
+    font-family: var(--Poppins);
+    display: flex;
+    justify-content: space-evenly;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
