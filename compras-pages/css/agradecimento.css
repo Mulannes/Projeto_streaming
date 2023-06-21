@@ -20,7 +20,9 @@ p{
     text-align: center;
 }
 #botão{
-
+    margin: 0 auto;
+    width: 50%; 
+    width: 50%;
     font-family: var(--Poppins);
     display: flex;
     justify-content: space-evenly;
