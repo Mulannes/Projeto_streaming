@@ -27,20 +27,20 @@ html {
   align-items: center;
 }
 .logo-section a img {
-  width: 25%;
-  height: 25%;
+  width: 100px;
+  height: 100px;
   cursor: pointer;
+  margin-top: 5px;
 }
 
 .main-div {
   width: 100vw;
   height: 80vh;
-  background-color: #3C3838;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: white;
+  color: #fff;
 }
 
 .main-div h1 {
@@ -64,7 +64,7 @@ html {
   width: 10vw;
   min-width: 8.4px;
   max-width: 20rem;
-  border-radius: 0.4rem;
+  border-radius: 50%;
   border: none;
   outline: none;
   margin-top: 4rem;
@@ -76,15 +76,15 @@ html {
 }
 
 .memberDiv .btn:nth-child(1) {
-  background-image: url("./images//user1.png");
+  background-image: url("../assets/UserData-test/User1.jpg");
 }
 
 .memberDiv .btn:nth-child(2) {
-  background-image: url("./images//user2.png");
+  background-image: url("../UserData-test//user2.png");
 }
 
 .memberDiv .btn:nth-child(3) {
-  background-image: url("./images//user3.png");
+  background-image: url("../UserData-test//user3.png");
 }
 
 .memberDiv .btn:hover {
@@ -94,7 +94,6 @@ html {
 .memberDiv .btn span,
 .addIcon span {
   width: inherit;
-  /* background-color: red; */
   position: absolute;
   bottom: -3.5rem;
   left: 0;
