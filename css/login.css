@@ -1,7 +1,6 @@
 html,body{height: 100%; box-sizing: border-box;}
 
-body 
-{
+body {
   font-family:sans-serif; 
   background: linear-gradient(to top, #428c85, #7338e6); 
   display: flex;
@@ -25,8 +24,8 @@ form{
 }
 
 img {
-  width: 60px;
-  height: 60px;
+  width: 100px;
+  height: 100px;
   margin: 5px 0px 0px 5px;
   position: absolute;
 }
