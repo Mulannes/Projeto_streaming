@@ -35,25 +35,29 @@ app.post('/login', (req, res) => {
 
     connection.query("SELECT * FROM usuario where email = '" + username + "'", function (err, rows) {
         if (!err) {
-            if (rows[0].senha === password) {
-                res.send('login com Sucesso');
-            } else {
-                res.send('senha incorreta')
-            }
-            // var senha = rows[0].password
-            // console.log("Resultado:", rows);
+            if (rows.length > 0) {
+              
+              if ( rows[0].senha === password) {
 
-            // if (password === "Senha do banco") {
-            //     console.log('Senha OK');
-            // } else {
-            //     console.log('Senha errada');
-            // }
-        } else {
-            res.send('email não cadastrado');
-        }
+
+                
+                  res.send('Login com Sucesso!!!');
+                  } else {
+                   res.send('Senha incorreta');
+                  }
+              
+            } else {
+              res.send('Login Falhou - Email não cadastrado');
+            }
+          } else {
+            console.log("Erro: Consulta não realizada", err);
+            res.send('Login failed');
+          }
+        
     });
     res.send('Mandou para o Servidor');
 })
+
 app.listen(3307, () => {
     console.log('Servidor rodando na porta 3000!')
 })
