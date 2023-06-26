@@ -15,20 +15,20 @@ html {
     scroll-behavior: smooth;
 }
 
-h1 {
-    font-family: Arial;
-    color: var(--lightgray);
-    text-align: center;
+body {
+    overflow-x: hidden;
 }
 
 h2 {
     font-family: Arial;
     text-align: center;
-    font-weight: 300;
+    font-weight: 600;
+    font-size: 2.5em;
     color: var(--lightgray);
 }
 
 .wrapper {
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 100%);
     overflow: hidden;
@@ -40,7 +40,7 @@ h2 {
     position: relative;
     display: grid;
     grid-template-columns: repeat(5, auto);
-    margin: 20px 0;
+    margin: 20px 0px;
 }
 
 .wrapper section .item {
@@ -83,4 +83,8 @@ h2 {
     a.arrow__btn {
         display: none;
     }
+}
+
+::-webkit-scrollbar {
+    width: 0;
 }
