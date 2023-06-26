@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+  }
+  
+  html {
+    font-size: 62.5%;
+    background-color: #141414;
+  }
+
+  .mainDiv {
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+  }
+
+.logo-section {
+    width: 95vw;
+    margin: auto;
+    height: 7rem;
+    background-color: rgb(20, 20, 20);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .logo-section a img {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    margin-top: 5px;
+  }
+
+  .user{
+    display: flex;
+     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 10vw;
+    min-height: 8.4rem;
+    max-height: 20rem;
+    width: 10vw;
+    min-width: 8.4px;
+    max-width: 20rem;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    margin-top: 4rem;
+    position: relative;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../assets/UserData-test/User1.jpg");
+}
+
+.salvar{
+background-color: #428C85;
+color: white;
+padding: 14px 20px;
+border-radius: 5px;
+margin: 7px 0;
+width: 100%;
+font-size: 18px;
+justify-items: center;
+}
+.salvar:hover {
+opacity: 0.6;
+cursor: pointer;
+}
