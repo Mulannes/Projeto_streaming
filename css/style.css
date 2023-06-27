@@ -28,6 +28,10 @@ body {
     padding: 5rem 0;
 }
 
+.main-index {
+    background-image: url(/assets/bg.png);
+}
+
 .main-index-content {
     text-align: center;
 }
