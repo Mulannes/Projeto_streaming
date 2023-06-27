@@ -52,7 +52,13 @@ h2 {
 .item6,
 .item7,
 .item8,
-.item9 {
+.item9,
+.item10,
+.item11,
+.item12,
+.item13,
+.item14,
+.item15 {
     padding: 0 2px;
     transition: 250ms all;
 }
@@ -65,7 +71,14 @@ h2 {
 .item5:hover,
 .item6:hover,
 .item7:hover,
-.item8:hover {
+.item8:hover,
+.item9:hover,
+.item10:hover,
+.item11:hover,
+.item12:hover,
+.item13:hover,
+.item14:hover,
+.item15:hover {
     margin: 0 40px;
     transform: scale(1.2);
 }
