@@ -3,32 +3,45 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Open Sans", sans-serif;
+    
   }
   
   html {
     font-size: 62.5%;
-    background-color: #141414;
+    background-image: url(/assets/bg.png);
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: cover;
+    height: 1080px;
+    overflow: hidden;
+    background-color: black;
   }
 
   .mainDiv {
-    width: 100vw;
+    margin: auto;
+    width: 30vw;
     height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     color: #fff;
+    backdrop-filter: blur(10px) saturate(180%);
+    background-color: rgba(11, 15, 13, 0.582);
+    border: 5px solid #7338e6;
+    border-width: 3px;
+    border-radius: 12px;
   }
 
 .logo-section {
     width: 95vw;
     margin: auto;
     height: 7rem;
-    background-color: rgb(20, 20, 20);
     display: flex;
     justify-content: flex-start;
     align-items: center;
   }
+
   .logo-section a img {
     width: 100px;
     height: 100px;
@@ -58,17 +71,33 @@
     background-image: url("../assets/UserData-test/User1.jpg");
 }
 
-.salvar{
-background-color: #428C85;
-color: white;
-padding: 14px 20px;
-border-radius: 5px;
-margin: 7px 0;
-width: 100%;
-font-size: 18px;
-justify-items: center;
+  .userimg{
+    opacity: 0;
+  }
+  .save{
+  background-color: #428C85;
+  color: white;
+  padding: 14px 20px;
+  border-radius: 5px;
+  margin: 7px 0;
+  width: 100%;
+  font-size: 18px;
+  justify-items: center;
 }
-.salvar:hover {
-opacity: 0.6;
-cursor: pointer;
+  .save:hover {
+  opacity: 0.6;
+  cursor: pointer;
 }
+
+  input[type=text]{
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 5px;
+    padding: 10px 13px;
+    box-sizing: border-box;
+  }
+
+  .empty-space{
+    height: 60px;
+    width: 100%;
+  }
