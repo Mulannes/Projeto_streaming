@@ -81,6 +81,8 @@ span {
     display: flex;
     justify-content: center;
     background-image: url(/assets/planosilver.png);
+    background-repeat: no-repeat;
+    background-position: center center;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -92,6 +94,8 @@ span {
     display: flex;
     justify-content: center;
     background-image: url(/assets/planogold.png);    
+    background-repeat: no-repeat;
+    background-position: center center;
     position: absolute;
     bottom: 0;
 }
@@ -102,6 +106,8 @@ span {
     display: flex;
     justify-content: center;
     background-image: url(/assets/planodima.png);
+    background-repeat: no-repeat;
+    background-position: center center;
     position: absolute;
     bottom: 0;
     left: 0;
