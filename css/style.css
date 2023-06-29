@@ -163,6 +163,30 @@ body {
 }
 
 footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    color: #D9D9D9;
+    height: 290px;
+    background-color: #272323;
+    overflow: hidden;
+    position: relative;
+}
+
+footer>div>h2 {
+    font-family: "Poppins";
+    display: flex;
+    position: absolute;
+    top: 50px;
+}
+
+footer>div {
+    display: flex;
+    flex-direction: column;
+}
+
+/* footer {
     position: relative;
     display: flex;
     width: 100%;
@@ -196,7 +220,7 @@ footer {
 
 .rightFooter>p {
     color: #D9D9D9;
-}
+}*/
 
 .direitos {
     color: #D9D9D9;
