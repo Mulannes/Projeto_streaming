@@ -80,7 +80,7 @@ span {
     height: 70%;
     display: flex;
     justify-content: center;
-    background-color: var(--lightgray);
+    background-image: url(/assets/planosilver.png);
     position: absolute;
     bottom: 0;
     right: 0;
@@ -91,7 +91,7 @@ span {
     height: 90%;
     display: flex;
     justify-content: center;
-    background-color: var(--purple);
+    background-image: url(/assets/planogold.png);    
     position: absolute;
     bottom: 0;
 }
@@ -101,7 +101,7 @@ span {
     height: 70%;
     display: flex;
     justify-content: center;
-    background-color: var(--lightgray);
+    background-image: url(/assets/planodima.png);
     position: absolute;
     bottom: 0;
     left: 0;
@@ -129,8 +129,6 @@ span {
     padding: 4% 3%;
 
 }
-
-.planos-advantages>table {}
 
 #silver {
     background-color: var(--lightgray);
