@@ -28,6 +28,10 @@ body {
     padding: 5rem 0;
 }
 
+.main-index {
+    background-image: url(/assets/bg.png);
+}
+
 .main-index-content {
     text-align: center;
 }
@@ -37,6 +41,7 @@ body {
     font-size: 2em;
     font-weight: 600;
     font-family: var(--Poppins);
+    color: #D9D9D9;
 }
 
 .main-index-content .text>h1 {
@@ -67,6 +72,10 @@ body {
 .btn-text>input {
     padding-left: 30%;
     border: none;
+}
+
+.btn-text::placeholder {
+    color: rgb(255, 255, 255, 0.5);
 }
 
 .btn-submit {
@@ -115,7 +124,7 @@ body {
 .container-index-itens-padding {
     padding: 3rem;
     display: flex;
-
+    width: 80%;
 }
 
 .container-index-itens-left,
@@ -155,10 +164,84 @@ body {
 }
 
 footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    color: #D9D9D9;
+    height: 290px;
+    background-color: #272323;
+    overflow: hidden;
+    position: relative;
+    font-size: 18px;
+    font-family: "Poppins";
+}
+
+footer>div>h2 {
+
+    display: flex;
+    position: absolute;
+    top: 50px;
+}
+
+footer>div {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu>a {
+    color: #7338E6;
+    text-decoration: underline;
+    border-bottom: 2px;
+}
+
+#form {
+    display: flex;
+}
+
+#inputEmail {
+    width: 250px;
+    height: 35px;
+    appearance: 0;
+    border: 0;
+    padding: 0 5px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+
+#inputSubmit {
+    width: 100px;
+    height: 35px;
+    margin: 0;
+    appearance: 0;
+    border: 0;
+    display: flex;
+    padding: 0 5px;
+    background-color: #7338E6;
+    color: #D9D9D9;
+    font-weight: 600;
+    justify-content: center;
+    margin-top: 30px;
+    transition: .5s;
+}
+
+#inputSubmit:hover {
+    background-color: #428C85;
+}
+
+.logos>a>img {
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+}
+
+/* footer {
     position: relative;
     display: flex;
     width: 100%;
-    height: 800px;
+    height: 290px;
     background-color: #272323;
     overflow: hidden;
 }
@@ -171,7 +254,7 @@ footer {
 }
 
 #logoFooter {
-    width: 100%;
+    width: 99%;
     height: 90%;
 }
 
@@ -188,7 +271,7 @@ footer {
 
 .rightFooter>p {
     color: #D9D9D9;
-}
+}*/
 
 .direitos {
     color: #D9D9D9;

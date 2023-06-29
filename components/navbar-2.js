@@ -226,7 +226,7 @@ class Header extends HTMLElement {
                   </svg>
                 </div>
               </div>
-            <img src="/assets/icons/perfil.png" alt="icone" id="icon-perfil">
+              <a href="/html/userdata.html"><img src="/assets/icons/perfil.png" alt="icone" id="icon-perfil"></a>
         </nav>
     </header>
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">

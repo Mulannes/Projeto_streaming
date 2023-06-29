@@ -35,7 +35,7 @@ html {
 
 .main-div {
   width: 100vw;
-  height: 80vh;
+  height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -134,4 +134,8 @@ html {
 .manageProfile:hover {
   border: 1px solid #fff;
   color: #fff;
+}
+
+.empty-space{
+  height: 75px;
 }

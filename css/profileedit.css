@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    
+  }
+  
+  html {
+    font-size: 62.5%;
+    background-image: url(/assets/bg.png);
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: cover;
+    height: 1080px;
+    overflow: hidden;
+    background-color: black;
+  }
+
+  .mainDiv {
+    margin: auto;
+    width: 30vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    backdrop-filter: blur(10px) saturate(180%);
+    background-color: rgba(11, 15, 13, 0.582);
+    border: 5px solid #7338e6;
+    border-width: 3px;
+    border-radius: 12px;
+  }
+
+.logo-section {
+    width: 95vw;
+    margin: auto;
+    height: 7rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .logo-section a img {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    margin-top: 5px;
+  }
+
+  .user{
+    display: flex;
+     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 10vw;
+    min-height: 8.4rem;
+    max-height: 20rem;
+    width: 10vw;
+    min-width: 8.4px;
+    max-width: 20rem;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    margin-top: 4rem;
+    position: relative;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../assets/UserData-test/User1.jpg");
+}
+
+  .userimg{
+    opacity: 0;
+  }
+  .save{
+  background-color: #428C85;
+  color: white;
+  padding: 14px 20px;
+  border-radius: 5px;
+  margin: 7px 0;
+  width: 100%;
+  font-size: 18px;
+  justify-items: center;
+}
+  .save:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+  input[type=text]{
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 5px;
+    padding: 10px 13px;
+    box-sizing: border-box;
+  }
+
+  .empty-space{
+    height: 60px;
+    width: 100%;
+  }
