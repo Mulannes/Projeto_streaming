@@ -1,4 +1,4 @@
-class div extends HTMLElement {
+class footer extends HTMLElement {
     constructor() {
         super();
     }
@@ -25,6 +25,7 @@ class div extends HTMLElement {
         display: flex;
         position: absolute;
         top: 50px;
+        font-size: 2em;
     }
     
     footer>div {
@@ -74,12 +75,12 @@ class div extends HTMLElement {
         background-color: #428C85;
     }
     
-    .logos>img {
+    .logos>a>img {
         width: 50px;
         height: 50px;
         margin-top: 20px;
     }
-
+    
     .direitos {
         color: #D9D9D9;
         display: flex;
@@ -102,9 +103,10 @@ class div extends HTMLElement {
         </div>
         <div class="menu">
             <h2>Menu</h2>
-            <a href="/html/index.html">Home</a>
-            <a href="/html/register.html">Cadastro</a>
-            <a href="/html/login.html">Login</a>
+            <a href="/html/filmes.html">Filmes</a>
+            <a href="/html/plano-page.html">Planos</a>
+            <a href="/html/profileedit.html">Profile</a>
+            <a href="/html/profileselector.html">Escolha perfil</a>
         </div>
         <div class="recent-itens">
             <h2>Recente atualizações</h2>
@@ -113,16 +115,16 @@ class div extends HTMLElement {
             <p>Mesquita Viado</p>
         </div>
         <div class="newsletter">
-            <h2>Registre-se</h2>
-            <form action="register.html" id="form">
-                <input type="email" placeholder="Seu email" id="inputEmail">
-                <input type="submit" value="Registrar-se" id="inputSubmit">
+            <h2>Site</h2>
+            <form action="" id="form">
+                <input type="search" placeholder="Procurar filmes" id="inputEmail">
+                <input type="submit" value="Procurar" id="inputSubmit">
             </form>
             <div class="logos">
-                <img src="/assets/icons/world (1).png" alt="Logo">
-                <img src="/assets/icons/world (1).png" alt="Logo">
-                <img src="/assets/icons/world (1).png" alt="Logo">
-                <img src="/assets/icons/world (1).png" alt="Logo">
+                <a href="https://www.facebook.com/people/Murillo-Lannes/pfbid02c1W14ynuzuB4HTKskr8hhwwLZNPyF9FXtHLugSpqf5z6kGZizDj3WwPMYErbPcsEl/"><img src="/assets/icons/iconfb.png" alt="Logo"></a>
+                <a href="https://github.com/Mulannes"><img src="/assets/icons/icongit.png" alt="Logo"></a>
+                <a href="https://www.instagram.com/kauasdn_/"><img src="/assets/icons/iconig.png" alt="Logo"></a>
+                <a href="https://twitter.com/Mulannes1"><img src="/assets/icons/icontwt.png" alt="Logo"></a>
             </div>
         </div>
         <div class="direitos">
@@ -134,4 +136,4 @@ class div extends HTMLElement {
     }
 }
 
-customElements.define("footer", Footer);
+customElements.define("footer-1", footer);

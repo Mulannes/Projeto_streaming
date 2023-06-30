@@ -10,6 +10,9 @@
     --dark-gray: #514D4D;
     --Poppins: "Poppins";
 }
+*{
+    box-sizing: border-box;
+}
 
 html {
     scroll-behavior: smooth;
@@ -133,10 +136,9 @@ h2 {
     place-items: center;
 }
 
-.item5>img {
+.imgFilm {
     max-width: 341px;
     max-height: 192px;
-
 }
 
 .popup a {
@@ -220,4 +222,4 @@ a.effect-shine:hover {
 
 ::-webkit-scrollbar {
     width: 0;
-}
+}   

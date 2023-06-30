@@ -35,15 +35,15 @@
     cursor: pointer;
 }
 
-p {
-    font-family: var(--Poppins);
-    color: #fff;
-    font-size: 25px;
+#title{
+    text-align: center;
+    font-size: 3em;
+    color: #D9D9D9;
+    font-family: "Poppins",sans-serif;
+    margin-top: 75px;
 }
 
-h2 {
-    padding-left: 225px;
-    padding-top: 100px;
+.prf {
     font-family: var(--Poppins);
     color: #fff;
     font-size: 25px;

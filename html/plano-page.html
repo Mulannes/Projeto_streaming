@@ -8,6 +8,7 @@
     <title>Planos</title>
     <script src="/components/navbar-2.js"></script>
     <link rel="stylesheet" href="/css/planos.css">
+    <script src="/components/footer.js"></script>
 </head>
 
 <body>
@@ -15,27 +16,27 @@
     <section class="main">
         <div class="main-itens">
             <div class="area silver" onclick="silver()">
-                <p><b>Mais Barato</b></p>
+                <p class="prf"><b>Mais Barato</b></p>
                 <div>
                     <span><b>Silver</b></span>
                 </div>
 
             </div>
             <div class="area gold" onclick="gold()">
-                <p><b>Recomendado</b></p>
+                <p class="prf"><b>Recomendado</b></p>
                 <div>
                     <span><b>Gold</b></span>
                 </div>
             </div>
             <div class="area diamond" onclick="diamond()">
-                <p><b>Mais Benéfico</b></p>
+                <p class="prf"><b>Mais Benéfico</b></p>
                 <div>
                     <span><b>Diamond</b></span>
                 </div>
             </div>
         </div>
     </section>
-    <h2>Escolha o melhor plano para você</h2>
+    <h2 id="title">Escolha o melhor plano para você</h2>
     <section class="planos-advantages">
         <table>
             <tbody>
@@ -84,7 +85,7 @@
             </tbody>
         </table>
     </section>
-
+    <footer-1></footer-1>
     <script>
         function silver() {
             window.location.href = '../compras-pages/html/forma-pagamento.html'
