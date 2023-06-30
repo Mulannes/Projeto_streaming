@@ -109,8 +109,8 @@ class div extends HTMLElement {
         <div class="recent-itens">
             <h2>Recente atualizações</h2>
             <p>Novos filmes adicionados</p>
-            <p>Conte roubou o hulk</p>
-            <p>Mesquita Viado</p>
+            <p>Ator famoso: 'Augusto Conte', é preso após denuncias</p>
+            <p>'Vinicius Henrique' é contratado para participar na série 'Fundamental'</p>
         </div>
         <div class="newsletter">
             <h2>Registre-se</h2>
@@ -126,7 +126,7 @@ class div extends HTMLElement {
             </div>
         </div>
         <div class="direitos">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis incidunt quas nesciunt, odio modiaut.
+            <p>O melhor site de streaming do mercado brasileiro. Para você e toda sua família!
             </p>
         </div>
     </footer>
