@@ -53,8 +53,6 @@ class footer extends HTMLElement {
         margin-top: 30px;
     }
     
-    
-    
     #inputSubmit {
         width: 100px;
         height: 35px;
@@ -74,11 +72,16 @@ class footer extends HTMLElement {
     #inputSubmit:hover {
         background-color: #428C85;
     }
-    
-    .logos>a>img {
+
+    .imgLogos {
         width: 50px;
         height: 50px;
         margin-top: 20px;
+        transition: .3s;
+    }
+    
+    .imgLogos:hover{
+        transform: scale(1.3);
     }
     
     .direitos {
@@ -121,10 +124,10 @@ class footer extends HTMLElement {
                 <input type="submit" value="Procurar" id="inputSubmit">
             </form>
             <div class="logos">
-                <a href="https://www.facebook.com/people/Murillo-Lannes/pfbid02c1W14ynuzuB4HTKskr8hhwwLZNPyF9FXtHLugSpqf5z6kGZizDj3WwPMYErbPcsEl/"><img src="/assets/icons/iconfb.png" alt="Logo"></a>
-                <a href="https://github.com/Mulannes"><img src="/assets/icons/icongit.png" alt="Logo"></a>
-                <a href="https://www.instagram.com/kauasdn_/"><img src="/assets/icons/iconig.png" alt="Logo"></a>
-                <a href="https://twitter.com/Mulannes1"><img src="/assets/icons/icontwt.png" alt="Logo"></a>
+                <a href="https://www.facebook.com/people/Murillo-Lannes/pfbid02c1W14ynuzuB4HTKskr8hhwwLZNPyF9FXtHLugSpqf5z6kGZizDj3WwPMYErbPcsEl/"><img src="/assets/icons/iconfb.png" alt="Logo"class="imgLogos"></a>
+                <a href="https://github.com/Mulannes"><img src="/assets/icons/icongit.png" alt="Logo"class="imgLogos"></a>
+                <a href="https://www.instagram.com/kauasdn_/"><img src="/assets/icons/iconig.png" alt="Logo"class="imgLogos"></a>
+                <a href="https://twitter.com/Mulannes1"><img src="/assets/icons/icontwt.png" alt="Logo"class="imgLogos"></a>
             </div>
         </div>
         <div class="direitos">
