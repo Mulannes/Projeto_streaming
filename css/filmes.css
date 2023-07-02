@@ -30,7 +30,7 @@ body {
     color: var(--lightgray);
     margin-top: 20px;
 }
-
+/*Popup tela cheia*/
 .popup-wrapper {
     background-color: rgba(0, 0, 0, 0.7);
     position: fixed;
@@ -41,7 +41,7 @@ body {
     display: none;
     z-index: 99;
 }
-
+/*Popup telinha*/
 .popup {
     position: relative;
     text-align: center;
@@ -55,14 +55,14 @@ body {
     grid-auto-rows: auto;
     place-items: center;
 }
-
+/*Popup texta*/
 .popup a {
     background-color: gainsboro;
     color: black;
     text-decoration: none;
     padding: 6px 10px;
 }
-
+/*Popup X*/
 .popup-close {
     display: flex;
     position: absolute;
@@ -81,21 +81,21 @@ body {
         no-repeat; */
     background-color: red;
 }
-
+/*Popup X animação*/
 .popup-close:hover {
     --p: 100%;
     background-color: #7338e6;
     transform: scale(1.1);
     color: #fff;
 }
-
+/*Popup telinha area da esquerda(setando o tamanho)*/
 .popup-content-left {
     grid-column-start: 1;
     grid-column-end: 1;
     grid-row-start: 1;
     grid-row-end: 4;
 }
-
+/*Popup telinha area da direita(setando o tamanho)*/
 .popup-content-right {
     grid-column-start: 2;
     grid-column-end: 2;
@@ -106,7 +106,7 @@ body {
     align-items: center;
     flex-direction: column;
 }
-
+/*Popup telinha parte de baixo*/
 .popup-link {
     width: 50%;
     height: 50%;
@@ -114,7 +114,7 @@ body {
     grid-column-end: 5;
 }
 
-/* effect-shine */
+/* efeito-shine no texto*/
 a.effect-shine:hover {
     -webkit-mask-image: linear-gradient(
         -75deg,
@@ -125,7 +125,7 @@ a.effect-shine:hover {
     -webkit-mask-size: 200%;
     animation: shine 2s infinite;
 }
-
+/* Animação texto shine*/
 @-webkit-keyframes shine {
     from {
         -webkit-mask-position: 150%;
@@ -135,23 +135,26 @@ a.effect-shine:hover {
         -webkit-mask-position: -50%;
     }
 }
-
+/* Inutil mais vou deixar 👌*/
 @media only screen and (max-width: 600px) {
     a.arrow__btn {
         display: none;
     }
 }
-
+/* Apagando a scrollbar*/
 ::-webkit-scrollbar {
     width: 0;
 }
+
+/* SLIDE*/
+/* div para setar TUDO no meio*/
 .middle {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-
+/* tamanho da div em cima do slide*/
 .titleSlide {
     display: flex;
     align-items: center;
@@ -159,24 +162,26 @@ a.effect-shine:hover {
     width: 75%;
     height: 75px;
 }
-
+/* texto que fica em cima do slide*/
 .titleSlide > p {
     color: #d9d9d9;
     font-size: 3em;
     font-weight: bolder;
 }
 
+/* tamanho do slide*/
 .sectionSlide {
     max-width: 75%;
     height: 700px;
     z-index: 9;
 }
-
+/* Lugar das img no slide*/
 .swiper-container {
     width: 100%;
     height: 100%;
 }
 
+/* setando tudo para ficar centralizado (texto)*/
 .slide {
     display: flex;
     justify-content: center;
@@ -187,16 +192,17 @@ a.effect-shine:hover {
     background: #fff;
     overflow: hidden;
 }
+
+/* tamanho img no slide, além de setar no meio e para cobrir a div toda*/
 .slide-image {
     position: absolute;
-    top: -200;
-    left: -200;
-    width: calc(100% + 400px);
-    height: calc(100% + 400px);
-
-    background-size: contain;
+    width: calc(100%);
+    height: calc(100%);
+    background-size: cover;
     background-position: center;
 }
+
+/* Titulo do slide*/
 .slide-title {
     font-size: 4rem;
     line-height: 1;
@@ -209,12 +215,16 @@ a.effect-shine:hover {
     text-transform: uppercase;
     font-weight: normal;
 }
+
+/* Inutil mais vou deixar 👌*/
 @media (min-width: 45em) {
     .slide-title {
         font-size: 7vw;
         max-width: none;
     }
 }
+
+/* preparando para setar as animações das letras no slide*/
 .slide-title span {
     white-space: pre;
     display: inline-block;
@@ -224,6 +234,8 @@ a.effect-shine:hover {
 .slideshow {
     position: relative;
 }
+
+/* Area de baixo do slide, que carrega os numeros 1,2,3...*/
 .slideshow-pagination {
     position: absolute;
     bottom: 5rem;
@@ -236,13 +248,19 @@ a.effect-shine:hover {
     transition: 0.3s opacity;
     z-index: 10;
 }
+
+/* Div da linha e dos numeros*/
 .slideshow-pagination-item {
     display: flex;
     align-items: center;
 }
+
+/*numeros*/
 .slideshow-pagination-item .pagination-number {
     opacity: 0.5;
 }
+
+/*setando o cursor pointer para os num*/
 .slideshow-pagination-item:hover,
 .slideshow-pagination-item:focus {
     cursor: pointer;
@@ -256,6 +274,8 @@ a.effect-shine:hover {
 .slideshow-pagination-item.active .pagination-separator {
     width: 10vw;
 }
+
+/* Div das setas da esquerda e direita*/
 .slideshow-navigation-button {
     position: absolute;
     top: 0;
@@ -268,18 +288,25 @@ a.effect-shine:hover {
     transition: all 0.3s ease;
     color: #fff;
 }
+
+/* Animações dos botoes*/
 .slideshow-navigation-button:hover,
 .slideshow-navigation-button:focus {
     cursor: pointer;
     background: rgba(0, 0, 0, 0.5);
 }
+
+/* Setando um botão para a direita*/
 .slideshow-navigation-button.prev {
     left: 0;
 }
+
+/* Setando um botão para a esquerda*/
 .slideshow-navigation-button.next {
     right: 0;
 }
 
+/* Numeros debaixo*/
 .pagination-number {
     font-size: 1.8rem;
     color: #fff;
@@ -287,6 +314,7 @@ a.effect-shine:hover {
     padding: 0 0.5rem;
 }
 
+/* seta que separa os numeros*/
 .pagination-separator {
     display: none;
     position: relative;
@@ -295,11 +323,15 @@ a.effect-shine:hover {
     background: rgba(255, 255, 255, 0.25);
     transition: all 0.3s ease;
 }
+
+/* Inutil mais vou deixar 👌*/
 @media (min-width: 45em) {
     .pagination-separator {
         display: block;
     }
 }
+
+/* div para setar a cor branca da animação */
 .pagination-separator-loader {
     position: absolute;
     top: 0;
