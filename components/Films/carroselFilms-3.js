@@ -68,45 +68,41 @@ class table extends HTMLElement {
             background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, black 100%);
         }
         
-        .imgFilm {
-            max-width: 341px;
-            max-height: 192px;
-        }
-        
         </style>
         <div class="centerFilms">
     <div class="wrapper">
         <section id="section1">
             <div class="item16">
-                <img src="https://occ-0-1567-1123.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABRvngexxF8H1-OzRWFSj6ddD-aB93tTBP9kMNz3cIVfuIfLEP1E_0saiNAwOtrM6xSOXvoiSCMsihWSkW0dq808-R7_lBnr6WHbjkKBX6I3sD0uCcS8kSPbRjEDdG8CeeVXEAEV6spQ.webp"
+                <img src="/assets/films/1ecde018e863e2aaee31f00a23378c35.jpe" class="imgFilm"
                     alt="film image">
             </div>
             <div class="item17">
-                <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/a76057bcfd003711a76fb3985b1f2cf74beee3b8/AAAABVxuRB932hvre-XP0gh6ar5ztoR3Oe3QjKHkyvcDnRak2MKXOrx5H7mFQSvggefMFOppwEs7ZCCpiqrJ_CYGvtvYB9NpU4SWUtNO6uV2u-DTID267AcHjHcGvGBQJ1ufddDkxcGOZyi5MlOQ5QUmBun4652FbYUnib3zMYQDgcna_Pvz8y_HO5fbokxezrRR1JZAAiqFSQ.jpg"
+                <img src="/assets/films/1_fPjV96mCyaU4l_d4b_kluQ.png" class="imgFilm"
                     alt="film image">
             </div>
             <div class="item18">
-                <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABZEK-7pZ1H5FD4cTyUb9qB_KeyJGz5p-kfPhCFv4GU_3mbdm8Xfsy4IBchlG9PFNdGff8cBNPaeMra72VFnot41nt0y3e8RLgaVwwh3UvyM2H2_MkmadWbQUeGuf811K7-cxJJh7gA.jpg"
+                <img src="/assets/films/blade_runner.webp" class="imgFilm"
                     alt="film image">
             </div>
             <div class="item19">
-                <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABQCoK53qihwVPLRxPEDX98nyYpGbxgi5cc0ZOM4iHQu7KQvtgNyaNM5PsgI0vy5g3rLPZdjGCFr1EggrCPXpL77p2H08jV0tNEmIfs_e8KUfvBJ6Ay5nM4UM1dl-58xA6t1swmautOM.webp"
+                <img src="/assets/films/AAAABZDQb574eK3ctTQpZEHKZ2nfvHWmLPyqEwK_GvAqbQJl7Uwu3LaRf-eZOauzHXVz7Jq5ac2LkjY_9dB9Y_LpcSXOkuO4Mn_fe0rzc3bHBddG6ZrvHOFNOfI6zxMmNyCSrSA7Hw.jpg" class="imgFilm"
                     alt="film image">
             </div>
             <div class="item20">
-                <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABdYtAqj8CyaJTWq5taD8Ro_UgwH3nne9QpFGVps-2J3IG-leqrfqXFii4jzZn48nPYTkrlwKQEV0R7_cEKlYBPRzdKqNODc-Oz26IL3LlLgFboXibIWXwxzeYxzuqn0I9TpARjeByw.jpg"
+                <img src="/assets/films/5-Pixels_Columbia.jpg" class="imgFilm"
+                alt="film image"
                     alt="film image">
             </div>
             <div class="item21">
-                <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABdYtAqj8CyaJTWq5taD8Ro_UgwH3nne9QpFGVps-2J3IG-leqrfqXFii4jzZn48nPYTkrlwKQEV0R7_cEKlYBPRzdKqNODc-Oz26IL3LlLgFboXibIWXwxzeYxzuqn0I9TpARjeByw.jpg"
+                <img src="/assets/films/castlevania-stagione-4-recensione-nerdevil.jpg" class="imgFilm"
                     alt="film image">
             </div>
             <div class="item22">
-                <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABdYtAqj8CyaJTWq5taD8Ro_UgwH3nne9QpFGVps-2J3IG-leqrfqXFii4jzZn48nPYTkrlwKQEV0R7_cEKlYBPRzdKqNODc-Oz26IL3LlLgFboXibIWXwxzeYxzuqn0I9TpARjeByw.jpg"
+                <img src="/assets/films/d99512cf70c4025e6e31e9ccc1bd2a90615c34cdfdbb179d18f260b69bfad1de._UY500_UX667_RI_TTW_.jpg" class="imgFilm"
                     alt="film image">
             </div>
             <div class="item23">
-                <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABdYtAqj8CyaJTWq5taD8Ro_UgwH3nne9QpFGVps-2J3IG-leqrfqXFii4jzZn48nPYTkrlwKQEV0R7_cEKlYBPRzdKqNODc-Oz26IL3LlLgFboXibIWXwxzeYxzuqn0I9TpARjeByw.jpg"
+                <img src="/assets/films/homem-aranha-no-aranhaverso.jpg" class="imgFilm"
                     alt="film image">
             </div>
         </section>

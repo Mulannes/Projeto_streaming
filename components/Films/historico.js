@@ -1,4 +1,4 @@
-class Footer extends HTMLElement {
+class p extends HTMLElement {
     constructor() {
         super();
     }
@@ -31,27 +31,13 @@ class Footer extends HTMLElement {
             margin: 20px 0px;
         }
         
-        .wrapper section .item0,
-        .item1,
-        .item2,
-        .item3,
-        .item4,
-        .item5,
-        .item6,
-        .item7{
+        .wrapper section .item16, .item17, .item18, .item19, .item20 , .item21 , .item22, .item23{
             padding: 0 2px;
             transition: 250ms all;
             cursor: pointer;
         }
         
-        .wrapper section .item0:hover,
-        .item1:hover,
-        .item2:hover,
-        .item3:hover,
-        .item4:hover,
-        .item5:hover,
-        .item6:hover,
-        .item7:hover{
+        .wrapper section .item16:hover, .item17:hover, .item18:hover, .item19:hover, .item20:hover , .item21:hover , .item22:hover , .item23:hover{
             margin: 0 40px;
             transform: scale(1.2);
         }
@@ -82,54 +68,48 @@ class Footer extends HTMLElement {
             background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, black 100%);
         }
         
-        .imgFilm {
-            width: 341px;
-            height: 192px;
-            background-size: cover;
-        }
-        
         </style>
         <div class="centerFilms">
     <div class="wrapper">
         <section id="section1">
-            <div class="item0">
-                <img src="https://occ-0-1567-1123.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABRvngexxF8H1-OzRWFSj6ddD-aB93tTBP9kMNz3cIVfuIfLEP1E_0saiNAwOtrM6xSOXvoiSCMsihWSkW0dq808-R7_lBnr6WHbjkKBX6I3sD0uCcS8kSPbRjEDdG8CeeVXEAEV6spQ.webp"
+            <div class="item16">
+                <img src="/assets/films/1ecde018e863e2aaee31f00a23378c35.jpe" class="imgFilm"
                     alt="film image">
             </div>
-            <div class="item1">
-                <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/a76057bcfd003711a76fb3985b1f2cf74beee3b8/AAAABVxuRB932hvre-XP0gh6ar5ztoR3Oe3QjKHkyvcDnRak2MKXOrx5H7mFQSvggefMFOppwEs7ZCCpiqrJ_CYGvtvYB9NpU4SWUtNO6uV2u-DTID267AcHjHcGvGBQJ1ufddDkxcGOZyi5MlOQ5QUmBun4652FbYUnib3zMYQDgcna_Pvz8y_HO5fbokxezrRR1JZAAiqFSQ.jpg"
+            <div class="item17">
+                <img src="/assets/films/AAAABVGsTpARGmj4ZtZCp60ddhUgIFZWLbYkQictokvcBwkFUhDnOlujRaUqiwf-qVzPlO-dZ4iI-_dE6pjmsoKGXwTL-pVjYhcsjRzW61xRrsDELQlTHWyxQ278-mpqUWUM1gkilg.jpg" class="imgFilm"
                     alt="film image">
             </div>
-            <div class="item2">
-                <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABZEK-7pZ1H5FD4cTyUb9qB_KeyJGz5p-kfPhCFv4GU_3mbdm8Xfsy4IBchlG9PFNdGff8cBNPaeMra72VFnot41nt0y3e8RLgaVwwh3UvyM2H2_MkmadWbQUeGuf811K7-cxJJh7gA.jpg"
+            <div class="item18">
+                <img src="/assets/films/AAAABaaOMiboSYEjO5NqFOrkatZE9VDTsN_E3SCFO8tR98BlU6hsg4Gn_QyCxp504MwI7H12R-vmBgWsImMcp3Z7layXjYFuOmIyb0K6.jpg" class="imgFilm"
                     alt="film image">
             </div>
-            <div class="item3">
-                <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABQCoK53qihwVPLRxPEDX98nyYpGbxgi5cc0ZOM4iHQu7KQvtgNyaNM5PsgI0vy5g3rLPZdjGCFr1EggrCPXpL77p2H08jV0tNEmIfs_e8KUfvBJ6Ay5nM4UM1dl-58xA6t1swmautOM.webp"
+            <div class="item19">
+                <img src="/assets/films/cover-desktop@1x-e6d6aaa1.jpg" class="imgFilm"
                     alt="film image">
             </div>
-            <div class="item4">
-                <img src="/assets/films/A-Lei-da-Noite-.jpg" class="imgFilm" alt="film image">
-            </div>
-            <div class="item5">
-                <img src="/assets/films/smbof12.jpg" class="imgFilm"
+            <div class="item20">
+                <img src="/assets/films/the-witcher-season-3-netflix-techtudo-01.webp" class="imgFilm"
+                alt="film image"
                     alt="film image">
             </div>
-            <div class="item6">
+            <div class="item21">
                 <img src="/assets/films/wandinha.png" class="imgFilm"
                     alt="film image">
             </div>
-            <div class="item7">
-                <img src="/assets/films/the-hobbit-the-desolation-of-smaug-lord-of-the-rings-35059156-3547-2270.jpg" class="imgFilm"
+            <div class="item22">
+                <img src="/assets/films/1_fPjV96mCyaU4l_d4b_kluQ.png" class="imgFilm"
                     alt="film image">
             </div>
-            
+            <div class="item23">
+                <img src="/assets/films/d99512cf70c4025e6e31e9ccc1bd2a90615c34cdfdbb179d18f260b69bfad1de._UY500_UX667_RI_TTW_.jpg" class="imgFilm"
+                    alt="film image">
+            </div>
         </section>
     </div>
 </div>
-<script>
 `;
     }
 }
 
-customElements.define("carrosel-1", Footer);
+customElements.define("historico-1", p);

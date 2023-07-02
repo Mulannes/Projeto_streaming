@@ -1,10 +1,10 @@
 class Header extends HTMLElement {
-  constructor() {
-    super();
-  }
+    constructor() {
+        super();
+    }
 
-  connectedCallback() {
-    this.innerHTML = `
+    connectedCallback() {
+        this.innerHTML = `
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@400;500;600;700&display=swap');
@@ -213,7 +213,7 @@ class Header extends HTMLElement {
         <a href="/html/filmes.html"><img src="/assets/icons/logo.png" alt="Logo" class="logo"></a>
         <nav class="navigation-home">
             <a href="/html/filmes.html">Filmes</a>
-            <a href="#">Categorias</a>
+            <a href="/html/categorias.html">Categorias</a>
             <a href="/html/plano-page.html">Planos</a>
             <div class="search">
                 <input type="text" placeholder="search" />
@@ -244,7 +244,7 @@ class Header extends HTMLElement {
         </symbol>
       </svg>  
       `;
-  }
+    }
 }
 
 customElements.define("navbar-2", Header);

@@ -18,6 +18,7 @@ class footer extends HTMLElement {
         position: relative;
         font-size: 18px;
         font-family: "Poppins";
+        border-top: 1px solid #d9d9d9;
     }
     
     footer>div>h2 {

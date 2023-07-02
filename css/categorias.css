@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@400;500;600;700&display=swap");
+
+body {
+    width: 100%;
+}
+
+/* Estilizando o lugar que os embrulho vai ficar: */
+.container {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Estilizando o embrulho que os itens vão ficar: */
+.wrapperCat {
+    width: 75%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    height: 100%;
+    border-radius: 5px;
+    background: linear-gradient(to top, #428c85, #7338e6);
+}
+/* Estilizando a parte de cima da grid: */
+#titleCatg {
+    text-align: center;
+    font-size: 4em;
+    color: #d9d9d9;
+    font-family: "Poppins", sans-serif;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+/* Estilizando a parte da esquerda da grid: */
+.catgLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    color: #d9d9d9;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5em;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+
+/* Estilizando a parte da direita da grid: */
+.catgRight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #d9d9d9;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5em;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 2;
+}
+
+.custom-select {
+    margin-top: 20px;
+    position: relative;
+    width: 400px;
+    font-family: "Poppins", sans-serif;
+}
+
+.custom-select select {
+    display: none; /*Esconde o original select elemento: */
+}
+
+.select-selected {
+    background-color: transparent;
+}
+
+/* Estiliza a flecha: */
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+}
+
+/* Aponta a flecha para baixo quando estiver clicado: */
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+}
+
+/* Estiliza os itens (options), Incluindo o select item: */
+.select-items div,
+.select-selected {
+    color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+}
+
+.select-selected {
+    border-radius: 20px;
+    box-shadow: 0 0 10px black;
+    transition: 0.3s;
+    background-color: transparent;
+}
+
+.select-selected:hover {
+    transform: scale(1.1);
+}
+
+/* Estilização dos items (options): */
+.select-items {
+    position: absolute;
+    background-color: rgba(79, 78, 78, 1);
+    border: 1px solid #d9d9d9;
+    border-radius: 20px;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    transition: 0.3s;
+}
+
+/* Esconde os itens quando um item for selecionado: */
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+.footerBtnSrc {
+    display: flex;
+    width: 100%;
+    height: 75%;
+    justify-content: center;
+    grid-row-start: 4;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.footerBtnSrc > button {
+    width: 75%;
+    font-family: "Poppins", sans-serif;
+    font-size: 2em;
+    border-radius: 20px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.footerBtnSrc > button:hover {
+    transform: scale(1.1);
+    background-color: transparent;
+    color: #d9d9d9;
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Categorias</title>
+        <script src="/components/navbar-2.js"></script>
+        <link rel="stylesheet" href="/css/categorias.css" />
+        <script src="/components/Films/carroselFilms-1.js"></script>
+        <script src="/components/Films/carroselFilms-2.js"></script>
+        <script src="/components/Films/carroselFilms-3.js"></script>
+    </head>
+    <body>
+        <navbar-2></navbar-2>
+        <div class="container">
+            <div class="wrapperCat">
+                <p id="titleCatg">Categorias</p>
+                <div class="catgLeft">
+                <p>Escolha as categorias do seu filme</p>
+                <div class="custom-select">
+                <select id="categoria" onclick="scale()">
+                    <option  value="sp">Ação</option>
+                    <option  value="pt">Animação</option>
+                    <option  value="sp">Comédia</option>
+                    <option  value="sp">Drama</option
+                    <option  value="eu">Horror</option>
+                    <option  value="sp">Kids</option>
+                    <option  value="sp">Romantico</option>
+                    <option  value="sp">Sci-fi</option>
+                </select>
+            </div>
+            </div>
+            <div class="catgRight">
+                <p>Escolha o ano de seu filme(opcional)</p>
+                <div class="custom-select">
+                <select id="categoria-ano">
+                    <option  value="sp">2023</option>
+                    <option  value="pt">2022</option>
+                    <option  value="sp">2021</option>
+                    <option  value="sp">2020</option
+                    <option  value="eu">2019</option>
+                    <option  value="sp">2018</option>
+                    <option  value="sp">2017</option>
+                    <option  value="sp">Antes de 2017</option>
+                </select>
+            </div>
+                </div>
+                <div class="footerBtnSrc">
+                    
+                    <button>Pesquisar</button>
+                </div>
+            </div>
+        </div>
+
+        <img src="/assets/films/5-Pixels_Columbia.jpg" class="imgFilm">
+        <img src="/assets/films/castlevania-stagione-4-recensione-nerdevil.jpg" class="imgFilm">
+        <img src="/assets/films/d99512cf70c4025e6e31e9ccc1bd2a90615c34cdfdbb179d18f260b69bfad1de._UY500_UX667_RI_TTW_.jpg" class="imgFilm">
+        <img src="/assets/films/homem-aranha-no-aranhaverso.jpg" class="imgFilm">
+        
+        <carrosel-1></carrosel-1>
+        <carrosel-2></carrosel-2>
+        <carrosel-3></carrosel-3>
+        <script>
+            var x, i, j, l, ll, selElmnt, a, b, c;
+            /* Look for any elements with the class "custom-select": */
+            x = document.getElementsByClassName("custom-select");
+            l = x.length;
+            for (i = 0; i < l; i++) {
+                selElmnt = x[i].getElementsByTagName("select")[0];
+                ll = selElmnt.length;
+                /* For each element, create a new DIV that will act as the selected item: */
+                a = document.createElement("DIV");
+                a.setAttribute("class", "select-selected");
+                a.innerHTML =
+                    selElmnt.options[selElmnt.selectedIndex].innerHTML;
+                x[i].appendChild(a);
+                /* For each element, create a new DIV that will contain the option list: */
+                b = document.createElement("DIV");
+                b.setAttribute("class", "select-items select-hide");
+                for (j = 1; j < ll; j++) {
+                    /* For each option in the original select element,
+                create a new DIV that will act as an option item: */
+                    c = document.createElement("DIV");
+                    c.innerHTML = selElmnt.options[j].innerHTML;
+                    c.addEventListener("click", function (e) {
+                        /* When an item is clicked, update the original select box,
+                    and the selected item: */
+                        var y, i, k, s, h, sl, yl;
+                        s =
+                            this.parentNode.parentNode.getElementsByTagName(
+                                "select"
+                            )[0];
+                        sl = s.length;
+                        h = this.parentNode.previousSibling;
+                        for (i = 0; i < sl; i++) {
+                            if (s.options[i].innerHTML == this.innerHTML) {
+                                s.selectedIndex = i;
+                                h.innerHTML = this.innerHTML;
+                                y =
+                                    this.parentNode.getElementsByClassName(
+                                        "same-as-selected"
+                                    );
+                                yl = y.length;
+                                for (k = 0; k < yl; k++) {
+                                    y[k].removeAttribute("class");
+                                }
+                                this.setAttribute("class", "same-as-selected");
+                                break;
+                            }
+                        }
+                        h.click();
+                    });
+                    b.appendChild(c);
+                }
+                x[i].appendChild(b);
+                a.addEventListener("click", function (e) {
+                    /* When the select box is clicked, close any other select boxes,
+                and open/close the current select box: */
+                    e.stopPropagation();
+                    closeAllSelect(this);
+                    this.nextSibling.classList.toggle("select-hide");
+                    this.classList.toggle("select-arrow-active");
+                });
+            }
+
+            function closeAllSelect(elmnt) {
+                /* A function that will close all select boxes in the document,
+              except the current select box: */
+                var x,
+                    y,
+                    i,
+                    xl,
+                    yl,
+                    arrNo = [];
+                x = document.getElementsByClassName("select-items");
+                y = document.getElementsByClassName("select-selected");
+                xl = x.length;
+                yl = y.length;
+                for (i = 0; i < yl; i++) {
+                    if (elmnt == y[i]) {
+                        arrNo.push(i);
+                    } else {
+                        y[i].classList.remove("select-arrow-active");
+                    }
+                }
+                for (i = 0; i < xl; i++) {
+                    if (arrNo.indexOf(i)) {
+                        x[i].classList.add("select-hide");
+                    }
+                }
+            }
+
+            /* If the user clicks anywhere outside the select box,
+            then close all select boxes: */
+            document.addEventListener("click", closeAllSelect);
+        </script>
+    </body>
+</html>
