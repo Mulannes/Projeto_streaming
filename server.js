@@ -58,6 +58,6 @@ app.post('/login', (req, res) => {
     res.send('Mandou para o Servidor');
 })
 
-app.listen(3307, () => {
+app.listen(3306, () => {
     console.log('Servidor rodando na porta 3000!')
 })

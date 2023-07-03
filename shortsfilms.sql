@@ -15,10 +15,10 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 
 --
--- Banco de dados: `shortsfilms`
+-- Banco de dados: `shortfilms`
 --
 
 -- --------------------------------------------------------
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `ator` (
   `id_Ator` int NOT NULL,
   `Nome` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -42,7 +42,7 @@ CREATE TABLE `ator_filmes` (
   `id_Ator_Filmes` int NOT NULL,
   `fk_Ator` int NOT NULL,
   `fk_Filmes` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -53,8 +53,8 @@ CREATE TABLE `ator_filmes` (
 CREATE TABLE `diretor` (
   `id_Diretor` int NOT NULL,
   `Nome` varchar(200) NOT NULL,
-  `Tipo` varchar(300) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `Tipo` varchar(300) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -67,13 +67,13 @@ CREATE TABLE `filmes` (
   `fk_Diretor` int NOT NULL,
   `fk_Trailer` int NOT NULL,
   `Qualidade_Filme` int NOT NULL,
-  `Nome` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Nome` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `Ano de Lançamento` date NOT NULL,
   `Classificação Indicativa` int NOT NULL,
   `Genero` varchar(300) NOT NULL,
   `Duracao` time NOT NULL,
   `Capa_Filme` mediumblob NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -85,7 +85,7 @@ CREATE TABLE `historico_de_filmes` (
   `id_Historico` int NOT NULL,
   `fk_Perfil` int NOT NULL,
   `fk_Filme` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -96,10 +96,10 @@ CREATE TABLE `historico_de_filmes` (
 CREATE TABLE `perfis` (
   `id_Perfis` int NOT NULL,
   `fk_Usuario` int NOT NULL,
-  `Tipo_Usuario` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `Nome` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Tipo_Usuario` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `Nome` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `Foto` mediumblob NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -113,7 +113,7 @@ CREATE TABLE `planos` (
   `Preco` float(10,2) NOT NULL,
   `Vantagens` varchar(100) NOT NULL,
   `Icons` mediumblob NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -125,7 +125,7 @@ CREATE TABLE `trailer` (
   `id_Trailer` int NOT NULL,
   `Duracao` int NOT NULL,
   `Qualidade_Trailer` char(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -140,7 +140,7 @@ CREATE TABLE `usuario` (
   `Email` int NOT NULL,
   `Senha` int NOT NULL,
   `CPF` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Índices para tabelas despejadas
