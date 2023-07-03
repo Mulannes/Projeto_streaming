@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 29-Jun-2023 às 13:19
--- Versão do servidor: 8.0.21
--- versão do PHP: 8.1.2
+-- Generation Time: Jul 03, 2023 at 09:57 PM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -15,62 +15,62 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `shortfilms`
+-- Database: `shortfilms`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `ator`
+-- Table structure for table `ator`
 --
 
 CREATE TABLE `ator` (
-  `id_Ator` int NOT NULL,
-  `Nome` varchar(30) NOT NULL
+  `id_Ator` int(11) NOT NULL,
+  `Nome` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `ator_filmes`
+-- Table structure for table `ator_filmes`
 --
 
 CREATE TABLE `ator_filmes` (
-  `id_Ator_Filmes` int NOT NULL,
-  `fk_Ator` int NOT NULL,
-  `fk_Filmes` int NOT NULL
+  `id_Ator_Filmes` int(11) NOT NULL,
+  `fk_Ator` int(11) NOT NULL,
+  `fk_Filmes` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `diretor`
+-- Table structure for table `diretor`
 --
 
 CREATE TABLE `diretor` (
-  `id_Diretor` int NOT NULL,
-  `Nome` varchar(200) NOT NULL,
-  `Tipo` varchar(300) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL
+  `id_Diretor` int(11) NOT NULL,
+  `Nome` varchar(100) NOT NULL,
+  `Tipo` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `filmes`
+-- Table structure for table `filmes`
 --
 
 CREATE TABLE `filmes` (
-  `id_Filmes` int NOT NULL,
-  `fk_Diretor` int NOT NULL,
-  `fk_Trailer` int NOT NULL,
-  `Qualidade_Filme` int NOT NULL,
-  `Nome` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `id_Filmes` int(11) NOT NULL,
+  `fk_Diretor` int(11) NOT NULL,
+  `fk_Trailer` int(11) NOT NULL,
+  `Qualidade_Filme` int(11) NOT NULL,
+  `Nome` varchar(50) NOT NULL,
   `Ano de Lançamento` date NOT NULL,
-  `Classificação Indicativa` int NOT NULL,
-  `Genero` varchar(300) NOT NULL,
+  `Classificação Indicativa` int(11) NOT NULL,
+  `Genero` varchar(50) NOT NULL,
   `Duracao` time NOT NULL,
   `Capa_Filme` mediumblob NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
@@ -78,82 +78,89 @@ CREATE TABLE `filmes` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `historico_de_filmes`
+-- Table structure for table `historico_de_filmes`
 --
 
 CREATE TABLE `historico_de_filmes` (
-  `id_Historico` int NOT NULL,
-  `fk_Perfil` int NOT NULL,
-  `fk_Filme` int NOT NULL
+  `id_Historico` int(11) NOT NULL,
+  `fk_Perfil` int(11) NOT NULL,
+  `fk_Filme` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `perfis`
+-- Table structure for table `perfis`
 --
 
 CREATE TABLE `perfis` (
-  `id_Perfis` int NOT NULL,
-  `fk_Usuario` int NOT NULL,
-  `Tipo_Usuario` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `Nome` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `id_Perfis` int(11) NOT NULL,
+  `fk_Usuario` int(11) NOT NULL,
+  `Tipo_Usuario` varchar(50) NOT NULL,
+  `Nome` varchar(100) NOT NULL,
   `Foto` mediumblob NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `planos`
+-- Table structure for table `planos`
 --
 
 CREATE TABLE `planos` (
-  `id_Plano` int NOT NULL,
+  `id_Plano` int(11) NOT NULL,
   `Nome` varchar(100) NOT NULL,
   `Preco` float(10,2) NOT NULL,
   `Vantagens` varchar(100) NOT NULL,
   `Icons` mediumblob NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
+--
+-- Dumping data for table `planos`
+--
+
+INSERT INTO `planos` (`id_Plano`, `Nome`, `Preco`, `Vantagens`, `Icons`) VALUES
+(1, 'Plano Silver', 1.00, 'muitas', '');
+
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `trailer`
+-- Table structure for table `trailer`
 --
 
 CREATE TABLE `trailer` (
-  `id_Trailer` int NOT NULL,
-  `Duracao` int NOT NULL,
-  `Qualidade_Trailer` char(10) NOT NULL
+  `id_Trailer` int(11) NOT NULL,
+  `Duracao` varchar(10) NOT NULL,
+  `Qualidade_Trailer` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `usuario`
+-- Table structure for table `usuario`
 --
 
 CREATE TABLE `usuario` (
-  `id_Usuario` int NOT NULL,
-  `fk_Plano` int NOT NULL,
-  `Nome` varchar(100) NOT NULL,
-  `Email` int NOT NULL,
-  `Senha` int NOT NULL,
-  `CPF` int NOT NULL
+  `id_Usuario` int(5) NOT NULL,
+  `fk_Plano` int(11) NOT NULL,
+  `Nome` varchar(20) NOT NULL,
+  `Email` varchar(100) NOT NULL,
+  `Senha` varchar(30) NOT NULL,
+  `CPF` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Índices para tabelas despejadas
+-- Indexes for dumped tables
 --
 
 --
--- Índices para tabela `ator`
+-- Indexes for table `ator`
 --
 ALTER TABLE `ator`
   ADD PRIMARY KEY (`id_Ator`);
 
 --
--- Índices para tabela `ator_filmes`
+-- Indexes for table `ator_filmes`
 --
 ALTER TABLE `ator_filmes`
   ADD PRIMARY KEY (`id_Ator_Filmes`),
@@ -161,13 +168,13 @@ ALTER TABLE `ator_filmes`
   ADD KEY `Rel_Filme_ator` (`fk_Ator`);
 
 --
--- Índices para tabela `diretor`
+-- Indexes for table `diretor`
 --
 ALTER TABLE `diretor`
   ADD PRIMARY KEY (`id_Diretor`);
 
 --
--- Índices para tabela `filmes`
+-- Indexes for table `filmes`
 --
 ALTER TABLE `filmes`
   ADD PRIMARY KEY (`id_Filmes`),
@@ -175,7 +182,7 @@ ALTER TABLE `filmes`
   ADD KEY `fk_Previa_Filme_filmes` (`fk_Trailer`);
 
 --
--- Índices para tabela `historico_de_filmes`
+-- Indexes for table `historico_de_filmes`
 --
 ALTER TABLE `historico_de_filmes`
   ADD PRIMARY KEY (`id_Historico`),
@@ -183,125 +190,125 @@ ALTER TABLE `historico_de_filmes`
   ADD KEY `fk_perfil_perfis` (`fk_Perfil`);
 
 --
--- Índices para tabela `perfis`
+-- Indexes for table `perfis`
 --
 ALTER TABLE `perfis`
   ADD PRIMARY KEY (`id_Perfis`),
   ADD KEY `fk_usuário_perfis` (`fk_Usuario`);
 
 --
--- Índices para tabela `planos`
+-- Indexes for table `planos`
 --
 ALTER TABLE `planos`
   ADD PRIMARY KEY (`id_Plano`);
 
 --
--- Índices para tabela `trailer`
+-- Indexes for table `trailer`
 --
 ALTER TABLE `trailer`
   ADD PRIMARY KEY (`id_Trailer`);
 
 --
--- Índices para tabela `usuario`
+-- Indexes for table `usuario`
 --
 ALTER TABLE `usuario`
   ADD PRIMARY KEY (`id_Usuario`),
   ADD KEY `fk_planos_usuario` (`fk_Plano`);
 
 --
--- AUTO_INCREMENT de tabelas despejadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de tabela `ator`
+-- AUTO_INCREMENT for table `ator`
 --
 ALTER TABLE `ator`
-  MODIFY `id_Ator` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id_Ator` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de tabela `ator_filmes`
+-- AUTO_INCREMENT for table `ator_filmes`
 --
 ALTER TABLE `ator_filmes`
-  MODIFY `id_Ator_Filmes` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id_Ator_Filmes` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de tabela `diretor`
+-- AUTO_INCREMENT for table `diretor`
 --
 ALTER TABLE `diretor`
-  MODIFY `id_Diretor` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id_Diretor` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de tabela `filmes`
+-- AUTO_INCREMENT for table `filmes`
 --
 ALTER TABLE `filmes`
-  MODIFY `id_Filmes` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id_Filmes` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de tabela `historico_de_filmes`
+-- AUTO_INCREMENT for table `historico_de_filmes`
 --
 ALTER TABLE `historico_de_filmes`
-  MODIFY `id_Historico` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id_Historico` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de tabela `perfis`
+-- AUTO_INCREMENT for table `perfis`
 --
 ALTER TABLE `perfis`
-  MODIFY `id_Perfis` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id_Perfis` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de tabela `planos`
+-- AUTO_INCREMENT for table `planos`
 --
 ALTER TABLE `planos`
-  MODIFY `id_Plano` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id_Plano` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT de tabela `trailer`
+-- AUTO_INCREMENT for table `trailer`
 --
 ALTER TABLE `trailer`
-  MODIFY `id_Trailer` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id_Trailer` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de tabela `usuario`
+-- AUTO_INCREMENT for table `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_Usuario` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id_Usuario` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- Restrições para despejos de tabelas
+-- Constraints for dumped tables
 --
 
 --
--- Limitadores para a tabela `ator_filmes`
+-- Constraints for table `ator_filmes`
 --
 ALTER TABLE `ator_filmes`
-  ADD CONSTRAINT `Rel_Ator_filme` FOREIGN KEY (`fk_Filmes`) REFERENCES `filmes` (`id_Filmes`) ON DELETE RESTRICT ON UPDATE RESTRICT,
-  ADD CONSTRAINT `Rel_Filme_ator` FOREIGN KEY (`fk_Ator`) REFERENCES `ator` (`id_Ator`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+  ADD CONSTRAINT `Rel_Ator_filme` FOREIGN KEY (`fk_Filmes`) REFERENCES `filmes` (`id_Filmes`),
+  ADD CONSTRAINT `Rel_Filme_ator` FOREIGN KEY (`fk_Ator`) REFERENCES `ator` (`id_Ator`);
 
 --
--- Limitadores para a tabela `filmes`
+-- Constraints for table `filmes`
 --
 ALTER TABLE `filmes`
-  ADD CONSTRAINT `Rel_Filme_diretor` FOREIGN KEY (`fk_Diretor`) REFERENCES `diretor` (`id_Diretor`) ON DELETE RESTRICT ON UPDATE RESTRICT,
-  ADD CONSTRAINT `Rel_Filme_treiler` FOREIGN KEY (`fk_Trailer`) REFERENCES `trailer` (`id_Trailer`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+  ADD CONSTRAINT `Rel_Filme_diretor` FOREIGN KEY (`fk_Diretor`) REFERENCES `diretor` (`id_Diretor`),
+  ADD CONSTRAINT `Rel_Filme_treiler` FOREIGN KEY (`fk_Trailer`) REFERENCES `trailer` (`id_Trailer`);
 
 --
--- Limitadores para a tabela `historico_de_filmes`
+-- Constraints for table `historico_de_filmes`
 --
 ALTER TABLE `historico_de_filmes`
-  ADD CONSTRAINT `Rel_filme_perfis` FOREIGN KEY (`fk_Perfil`) REFERENCES `perfis` (`id_Perfis`) ON DELETE RESTRICT ON UPDATE RESTRICT,
-  ADD CONSTRAINT `Rel_perfil_filme` FOREIGN KEY (`fk_Filme`) REFERENCES `filmes` (`id_Filmes`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+  ADD CONSTRAINT `Rel_filme_perfis` FOREIGN KEY (`fk_Perfil`) REFERENCES `perfis` (`id_Perfis`),
+  ADD CONSTRAINT `Rel_perfil_filme` FOREIGN KEY (`fk_Filme`) REFERENCES `filmes` (`id_Filmes`);
 
 --
--- Limitadores para a tabela `perfis`
+-- Constraints for table `perfis`
 --
 ALTER TABLE `perfis`
-  ADD CONSTRAINT `Rel_Perfis_usuario` FOREIGN KEY (`fk_Usuario`) REFERENCES `usuario` (`id_Usuario`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+  ADD CONSTRAINT `Rel_Perfis_usuario` FOREIGN KEY (`fk_Usuario`) REFERENCES `usuario` (`id_Usuario`);
 
 --
--- Limitadores para a tabela `usuario`
+-- Constraints for table `usuario`
 --
 ALTER TABLE `usuario`
-  ADD CONSTRAINT `Rel_Usuario_plano` FOREIGN KEY (`fk_Plano`) REFERENCES `planos` (`id_Plano`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+  ADD CONSTRAINT `Rel_Usuario_plano` FOREIGN KEY (`fk_Plano`) REFERENCES `planos` (`id_Plano`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
