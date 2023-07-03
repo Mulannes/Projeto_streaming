@@ -88,7 +88,7 @@ class span extends HTMLElement {
         <div class="centerFilms">
         <div class="wrapper">
         <section id="section1">
-            <div class="item0">
+            <div class="item8">
                 <img src="/assets/films/ADAOpipocasclub-e1662577756810.webp" class="imgFilm"
                     alt="film image">
             </div>

@@ -277,6 +277,14 @@ button:hover {
     cursor: pointer;
 }
 
+.buttonEve {
+    width: 100%;
+}
+
+#buttonPlano2 {
+    background-color: #7338e6;
+}
+
 .advertise {
     height: 100px;
     width: 100%;
