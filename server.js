@@ -65,13 +65,14 @@ app.post("/register", async (req, res) => {
       msg: 'Usuário cadastrado com sucesso.'
     });
   } catch (error) {
+    console.log(`🔴 Error saving user to database: ${error}`);
     res.status(500).json({
-      msg: error.message
+      msg: 'Erro ao salvar o usuário no banco de dados.'
     });
   }
 });
 
-//Login
+// Login
 app.post("/login", async (req, res) => {
   const { username, password } = req.body;
 
@@ -102,8 +103,9 @@ app.post("/login", async (req, res) => {
       msg: 'Usuário autenticado com sucesso.'
     });
   } catch (error) {
+    console.log(`🔴 Error finding user in database: ${error}`);
     res.status(500).json({
-      msg: error.message
+      msg: 'Erro ao buscar o usuário no banco de dados.'
     });
   }
 });
