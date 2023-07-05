@@ -17,7 +17,7 @@
 
 .container {
     width: 100%;
-    height: 56vh;
+    height: 800px;
     overflow: hidden;
     display: flex;
 }
@@ -40,16 +40,11 @@
     align-items: center;
 }
 
-#pixIcon {
-    width: 600px;
-    height: 200px;
-}
-
 .form__group {
     position: relative;
     padding: 20px 0 0;
     width: 100%;
-    max-width: 680px;
+    width: 580px;
     margin-top: 50px;
 }
 
@@ -59,7 +54,7 @@
     border: none;
     border-bottom: 2px solid #9b9b9b;
     outline: 0;
-    font-size: 37px;
+    font-size: 27px;
     color: #fff;
     padding: 7px 0;
     background: transparent;
@@ -71,7 +66,7 @@
 }
 
 .form__field:placeholder-shown ~ .form__label {
-    font-size: 37px;
+    font-size: 27px;
     cursor: text;
     top: 20px;
 }
@@ -81,7 +76,7 @@
     top: -15px;
     display: block;
     transition: 0.2s;
-    font-size: 37px;
+    font-size: 27px;
     color: #9b9b9b;
     pointer-events: none;
 }
@@ -96,10 +91,10 @@
 
 .form__field:focus ~ .form__label {
     position: absolute;
-    top: -30px;
+    top: -10px;
     display: block;
     transition: 0.2s;
-    font-size: 37px;
+    font-size: 27px;
     color: #38caef;
     font-weight: 700;
 }
@@ -108,64 +103,4 @@
 .form__field:required,
 .form__field:invalid {
     box-shadow: none;
-}
-
-button {
-    margin-top: 40px;
-    cursor: pointer;
-    position: relative;
-    background-color: #428c85;
-    border-radius: 5px;
-    box-shadow: #36766f 0px 4px 0px 0px;
-    padding: 15px;
-    background-repeat: no-repeat;
-    box-sizing: border-box;
-    width: 600px;
-    height: 49px;
-    color: #fff;
-    border: none;
-    font-size: 20px;
-    transition: all 0.3s ease-in-out;
-    z-index: 1;
-    overflow: hidden;
-}
-
-button::before {
-    content: "";
-    background-color: #2d645e;
-    width: 0;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: width 700ms ease-in-out;
-    display: inline-block;
-}
-
-button:hover::before {
-    width: 100%;
-}
-
-.popup-wrapper {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    top: 0;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-}
-
-.popup {
-    width: 800px;
-    height: 800px;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid #428c85;
-    border-radius: 20px;
 }
