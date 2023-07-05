@@ -11,23 +11,25 @@
 
 <body>
     <a href="index.html"><img src="../assets/icons/logo.png"></a>
-    <form action="/login" method="post">
+    <form method="post" id="login" onsubmit="doLogin(event)">
         <!-- Heading -->
         <div class="headingsContainer">
             <h1>Login<h1>
         </div>
 
+        <div id="errorContainer" class="errorContainer"></div>
+
         <!-- Main container -->
         <div class="mainContainer">
             <!-- Nome de Usuario -->
             <label for="username">Usuário</label>
-            <input type="text" placeholder="Digite seu nome de usuário" name="username" required>
+            <input type="text" placeholder="Digite seu nome de usuário" name="username" id="username" required>
 
             <br><br>
 
             <!-- Senha -->
             <label for="password">Senha</label>
-            <input type="password" placeholder="Digite sua senha" name="password" required>
+            <input type="password" placeholder="Digite sua senha" name="password" id="password" required>
 
             <!-- Checkbox esqueceu a senha -->
             <div class="subcontainer">
@@ -46,6 +48,49 @@
         </div>
 
     </form>
+    <script>
+        function doLogin(event) {
+            event.preventDefault();
+
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            if (username === "" || password === "") {
+                console.log("🔴 Preencha todos os campos");
+                return;
+            }
+
+            const userData = {
+                username: username,
+                password: password
+            };
+
+            fetch("http://localhost:3002/login", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(userData)
+            })
+                .then(function (response) {
+                    console.log(response);
+                    if (response.status === 200) {
+                        console.log("🟢 Usuário autenticado com sucesso");
+                        window.location.href = "filmes.html";
+                    } else if (response.status === 401) {
+                        displayErrorMessage("Credenciais inválidas. Verifique seu nome de usuário e senha.\n");
+                    }
+                })
+                .catch(function (error) {
+                    console.error(error);
+                });
+        }
+        function displayErrorMessage(message) {
+            const errorContainer = document.getElementById("errorContainer");
+            errorContainer.innerText = message;
+            errorContainer.style.display = "block";
+        }
+    </script>
 </body>
 
 </html>

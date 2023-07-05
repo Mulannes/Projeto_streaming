@@ -1,58 +1,113 @@
-const express = require('express')
-const bodyParser = require('body-parser')
-const mysql = require('mysql2');
-const app = express()
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: false }))
+const express = require("express");
+const app = express();
+const mongoose = require("mongoose");
+const cors = require("cors");
+const bcrypt = require("bcrypt");
+const { v4: uuidv4 } = require('uuid');
+require('dotenv').config();
 
-const path = require('path')
-app.use('/assets', express.static('assets'))
-app.use('/images', express.static('images'))
-app.use('/pages', express.static('pages'))
+app.use(cors());
+app.use(express.json());
 
-const connection = mysql.createConnection({
-  host: '127.0.0.1',
-  user: 'root',
-  password: 'root',
-  database: 'bd-node',
-});
+const dbuser = process.env.dbuser;
+const dbpass = process.env.dbpass;
 
-connection.connect(function (err) {
-  if (!err){
-    console.log("Conexão como o Banco realizada com sucesso!!!");
-  } else{
-    console.log("Erro: Conexão NÃO realizada", err);
+mongoose.connect(`mongodb+srv://${dbuser}:${dbpass}@shortfilms.yoa2vmk.mongodb.net/?retryWrites=true&w=majority`)
+  .then(() => {
+    console.log('🟢 Connection established');
+    app.listen(3000);
+  })
+  .catch((err) => {
+    console.log(`🔴 Error connecting to the database: ${err}`);
+    process.exit(1);
+  });
+
+const User = require('./models/user');
+
+// Cadastro
+app.post("/register", async (req, res) => {
+  const { username, email, password, confirmpassword } = req.body;
+
+  if (!username || !email || !password || !confirmpassword) {
+    return res.status(422).json({
+      msg: 'Preencha todos os campos obrigatórios.'
+    });
+  }
+
+  if (password !== confirmpassword) {
+    return res.status(422).json({
+      msg: 'As senhas precisam ser iguais.'
+    });
+  }
+
+  try {
+    const userExists = await User.findOne({ username });
+
+    if (userExists) {
+      return res.status(422).json({
+        msg: 'Esse usuário já está cadastrado.'
+      });
+    }
+
+    const user_id = uuidv4();
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+    const user = new User({
+      user_id,
+      username,
+      email,
+      password: hashedPassword
+    });
+
+    await user.save();
+
+    res.status(201).json({
+      msg: 'Usuário cadastrado com sucesso.'
+    });
+  } catch (error) {
+    res.status(500).json({
+      msg: error.message
+    });
   }
 });
 
-app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/html/login.html')
-})
- 
-app.post('/login', (req, res) => {
-  let username = req.body.username;
-  let password = req.body.password;
-  
-  connection.query("SELECT * FROM usuario where email = '" + username + "'" , function (err, rows, fields) {
-    console.log("Results:", rows);
-    if (!err) {
-      if (rows.length > 0) {
-        
-        if ( rows[0].senha === password) {
-            res.send('Login com Sucesso!!!');
-            } else {
-             res.send('Senha incorreta');
-            }
-        
-      } else {
-        res.send('Login Falhou - Email não cadastrado');
-      }
-    } else {
-      console.log("Erro: Consulta não realizada", err);
-      res.send('Login failed');
+//Login
+app.post("/login", async (req, res) => {
+  const { username, password } = req.body;
+
+  if (!username || !password) {
+    return res.status(422).json({
+      msg: 'Preencha todos os campos obrigatórios.'
+    });
+  }
+
+  try {
+    const user = await User.findOne({ username });
+
+    if (!user) {
+      return res.status(401).json({
+        msg: 'Credenciais inválidas.'
+      });
     }
-  });
+
+    const passwordMatch = await bcrypt.compare(password, user.password);
+
+    if (!passwordMatch) {
+      return res.status(401).json({
+        msg: 'Credenciais inválidas.'
+      });
+    }
+
+    res.status(200).json({
+      msg: 'Usuário autenticado com sucesso.'
+    });
+  } catch (error) {
+    res.status(500).json({
+      msg: error.message
+    });
+  }
 });
-app.listen(3000, () => {
-  console.log('Servidor rodando na porta 3000!')
-})
+
+app.listen(3002, () => {
+  console.log("Servidor rodando na porta 3002");
+});
