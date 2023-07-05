@@ -11,10 +11,10 @@
 
 <body>
     <a href="index.html"><img src="../assets/icons/logo.png"></a>
-    <form action="http://localhost:3000/register" method="post" id="register" onsubmit=doRegistration(event)>
+    <form method="post" id="register" onsubmit="doRegistration(event)">
         <!-- Heading -->
         <div class="headingsContainer">
-            <h1>Cadastro<h1>
+            <h1>Cadastro</h1>
         </div>
 
         <!-- Main container -->
@@ -32,7 +32,7 @@
             <br><br>
 
             <!-- Senha -->
-            <label for="pswrd">Senha</label>
+            <label for="password">Senha</label>
             <input type="password" placeholder="Digite sua senha" name="password" id="password" required>
             <input type="password" placeholder="Confirme sua senha" name="confirmpassword" id="confirmpassword"
                 required>
@@ -49,19 +49,17 @@
 
     </form>
     <script>
-
-
         function doRegistration(event) {
             event.preventDefault();
 
-            const name = document.getElementById("username").value;
+            const username = document.getElementById("username").value;
             const email = document.getElementById("email").value;
             const password = document.getElementById("password").value;
             const confirmpassword = document.getElementById("confirmpassword").value;
 
             if (
                 email === "" ||
-                name === "" ||
+                username === "" ||
                 password === "" ||
                 confirmpassword === ""
             ) {
@@ -69,33 +67,33 @@
                 return;
             }
 
-            // Validar o email, CPF e a confirmação da senha
+            // Validar a confirmação da senha
 
             if (password !== confirmpassword) {
                 console.log("🔴 As senhas não conferem");
                 return;
             }
 
-            const data = {
-                name: String(name),
-                email: String(email),
-                password: String(password),
-                confirmpassword: String(confirmpassword)
+            const userData = {
+                username: username,
+                email: email,
+                password: password,
+                confirmpassword: confirmpassword
             };
 
-            fetch("http://localhost:3000/register", {
+            fetch("http://localhost:3002/register", {
                 method: "POST",
                 headers: {
-                    "Content-Type": "application/json",
+                    "Content-Type": "application/json"
                 },
-                body: JSON.stringify(data)
+                body: JSON.stringify(userData)
             })
                 .then(function (response) {
                     console.log(response);
                     if (response.status === 201) {
                         console.log("🟢 Usuário cadastrado com sucesso");
                         window.location.reload();
-                        navigateTo("/login");
+                        window.location.href = "login.html";
                     }
                 })
                 .catch(function (error) {
