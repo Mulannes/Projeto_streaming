@@ -45,9 +45,29 @@
                     alt="Pix icon"
                     id="pixIcon"
                 />
-                <button onclick="qrCode()" id="qrButton">Gerar QrCode</button>
+                <button id="qrButton">Gerar QrCode</button>
+            </div>
+        </div>
+        <div class="popup-wrapper">
+            <div class="popup">
+                <div class="qrcode">
+                    <img
+                        src="/assets/qrcode_static.poder360.com.br.png"
+                        alt="PIX"
+                    />
+                </div>
             </div>
         </div>
         <footer-1></footer-1>
+        <script>
+            const button = document.getElementById("qrButton");
+            const popup = document.querySelector(".popup-wrapper");
+            button.addEventListener("click", () => {
+                popup.style.display = "flex";
+            });
+            popup.addEventListener("click", () => {
+                popup.style.display = "none";
+            });
+        </script>
     </body>
 </html>

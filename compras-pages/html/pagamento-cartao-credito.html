@@ -1,15 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pagamento-Cartão-Crédito</title>
+        <script src="/components/navbar-2.js"></script>
+        <link
+            rel="stylesheet"
+            href="/compras-pages/css/forma-pagamentoCartao.css"
+        />
+        <script src="/components/footer.js"></script>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagamento-Cartão-Crédito</title>
-</head>
-
-<body>
-    cartao
-</body>
-
+    <body>
+        <navbar-2></navbar-2>
+        <div class="container">
+            <div class="left">
+                <form action="">
+                <div class="form__group field">
+                    <input
+                        type="text"
+                        placeholder="Nome completo"
+                        class="form__field"
+                        required
+                    />
+                    <label for="name" class="form__label">Serial</label>
+                </div>
+                <div class="form__group field">
+                    <input
+                        type="text"
+                        placeholder="Nome completo"
+                        class="form__field"
+                        required
+                        maxlength="3"
+                    />
+                    <label for="name" class="form__label">CVV</label>
+                </div>
+                <div class="form__group field">
+                    <input
+                        type="text"
+                        placeholder="Nome completo"
+                        class="form__field"
+                        required
+                    />
+                    <label for="Data" class="form__label"
+                        >Data de Vencimento</label
+                    >
+                </div>
+                <div class="form__group field">
+                    <input
+                        type="text"
+                        placeholder="Nome completo"
+                        class="form__field"
+                        required
+                    />
+                    <label for="name" class="form__label"
+                        >Nome do Titular</label
+                    >
+                </div>
+                <div class="form__group field">
+                    <input
+                        type="text"
+                        name="cpf"
+                        \
+                        pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                        \
+                        title="Digite um CPF no formato: xxx.xxx.xxx-xx"
+                        required
+                    />
+                    <label for="name" class="form__label">CPF</label>
+                </div>
+            </div>
+        </form>
+            <div class="right">
+                <img
+                    src="/assets/undraw_credit_card_payment_re_o911.svg"
+                    alt=""
+                />
+            </div>
+        </div>
+        <footer-1></footer-1>
+    </body>
 </html>
