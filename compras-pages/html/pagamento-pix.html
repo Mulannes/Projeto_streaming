@@ -17,12 +17,12 @@
         <navbar-2></navbar-2>
         <div class="container">
             <div class="left">
-                <form action="">
                 <div class="form__group field">
                     <input
                         type="text"
                         placeholder="Nome completo"
                         class="form__field"
+                        required
                     />
                     <label for="name" class="form__label">Name</label>
                 </div>
@@ -36,6 +36,7 @@
                         \
                         title="Digite um CPF no formato: xxx.xxx.xxx-xx"
                         placeholder="Digite seu CPF"
+                        required
                     />
                     <label for="name" class="form__label">CPF</label>
                 </div>
@@ -46,10 +47,7 @@
                     alt="Pix icon"
                     id="pixIcon"
                 />
-                <button id="qrButton" type="submit">
-                    Gerar QrCode
-                </button>
-                </form>
+                <button id="qrButton">Gerar QrCode</button>
             </div>
         </div>
         <div class="popup-wrapper">

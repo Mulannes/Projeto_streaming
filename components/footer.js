@@ -121,7 +121,7 @@ class footer extends HTMLElement {
         <div class="newsletter">
             <h2>Site</h2>
             <form action="" id="form">
-                <input type="search" placeholder="Procurar filmes" id="inputEmail">
+                <a href="/html/filmes.html"><input type="search" placeholder="Procurar filmes" id="inputEmail"></a>
                 <input type="submit" value="Procurar" id="inputSubmit">
             </form>
             <div class="logos">
