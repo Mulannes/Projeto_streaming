@@ -17,6 +17,8 @@
             <h1>Cadastro</h1>
         </div>
 
+        <div id="errorContainer" class="errorContainer"></div>
+
         <!-- Main container -->
         <div class="mainContainer">
             <!-- Nome de Usuario -->
@@ -71,6 +73,7 @@
 
             if (password !== confirmpassword) {
                 console.log("🔴 As senhas não conferem");
+                displayErrorMessage("As senhas não conferem.\n");
                 return;
             }
 
@@ -99,6 +102,11 @@
                 .catch(function (error) {
                     console.error(error);
                 });
+        }
+        function displayErrorMessage(message) {
+            const errorContainer = document.getElementById("errorContainer");
+            errorContainer.innerText = message;
+            errorContainer.style.display = "block";
         }
     </script>
 </body>
