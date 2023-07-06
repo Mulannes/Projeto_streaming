@@ -104,3 +104,64 @@
 .form__field:invalid {
     box-shadow: none;
 }
+
+
+button {
+    margin-top: 40px;
+    cursor: pointer;
+    position: relative;
+    background-color: #428c85;
+    border-radius: 5px;
+    box-shadow: #36766f 0px 4px 0px 0px;
+    padding: 15px;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    width: 600px;
+    height: 49px;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+    overflow: hidden;
+}
+
+button::before {
+    content: "";
+    background-color: #2d645e;
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 700ms ease-in-out;
+    display: inline-block;
+}
+
+button:hover::before {
+    width: 100%;
+}
+
+.popup-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.popup {
+    width: 800px;
+    height: 800px;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #428c85;
+    border-radius: 20px;
+}

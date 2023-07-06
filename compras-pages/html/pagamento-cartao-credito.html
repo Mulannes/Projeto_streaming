@@ -21,9 +21,10 @@
                 <div class="form__group field">
                     <input
                         type="text"
-                        placeholder="Nome completo"
+                        placeholder="Serial"
                         class="form__field"
                         required
+                        maxlength="16"
                     />
                     <label for="name" class="form__label">Serial</label>
                 </div>
@@ -43,6 +44,7 @@
                         placeholder="Nome completo"
                         class="form__field"
                         required
+                        maxlength="8"
                     />
                     <label for="Data" class="form__label"
                         >Data de Vencimento</label
@@ -63,13 +65,21 @@
                     <input
                         type="text"
                         name="cpf"
-                        \
-                        pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
-                        \
+                        placeholder="CPF"
+                        class="form__field"
+                        required
+                        title="Digite um CPF no formato: xxx.xxx.xxx-xx"
+                        pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" \
+                    />
+                    <!-- <input
+                        type="text"
+                        name="cpf"
                         title="Digite um CPF no formato: xxx.xxx.xxx-xx"
                         required
-                    />
-                    <label for="name" class="form__label">CPF</label>
+                    /> -->
+                    <label for="name" class="form__label"
+                    >CPF</label
+                >
                 </div>
             </div>
         </form>
@@ -78,8 +88,24 @@
                     src="/assets/undraw_credit_card_payment_re_o911.svg"
                     alt=""
                 />
+                <button id="cardButtom">Pagar</button>
             </div>
         </div>
         <footer-1></footer-1>
+            <div class="popup-wrapper">
+                <div class="popup">
+                <img src="/assets/Ok-amico.svg" alt="">
+            </div>
+        </div>
+        <script>
+            const button = document.getElementById("cardButtom");
+            const popup = document.querySelector(".popup-wrapper");
+            button.addEventListener("click", () => {
+                popup.style.display = "flex";
+            });
+            popup.addEventListener("click", () => {
+                window.location.href = "/html/filmes.html"
+            });
+        </script>
     </body>
 </html>

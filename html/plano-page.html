@@ -1,103 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Planos</title>
+        <script src="/components/navbar-2.js"></script>
+        <link rel="stylesheet" href="/css/planos.css" />
+        <script src="/components/footer.js"></script>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planos</title>
-    <script src="/components/navbar-2.js"></script>
-    <link rel="stylesheet" href="/css/planos.css">
-    <script src="/components/footer.js"></script>
-</head>
-
-<body>
-    <navbar-2></navbar-2>
-    <section class="main">
-        <div class="main-itens">
-            <div class="area silver" onclick="silver()">
-                <p class="prf"><b>Mais Barato</b></p>
-                <div>
-                    <span><b>Silver</b></span>
+    <body>
+        <navbar-2></navbar-2>
+        <section class="main">
+            <div class="main-itens">
+                <div class="area silver" onclick="silver()">
+                    <p class="prf"><b>Mais Barato</b></p>
+                    <div>
+                        <span><b>Silver</b></span>
+                    </div>
                 </div>
-
-            </div>
-            <div class="area gold" onclick="gold()">
-                <p class="prf"><b>Recomendado</b></p>
-                <div>
-                    <span><b>Gold</b></span>
+                <div class="area gold" onclick="gold()">
+                    <p class="prf"><b>Recomendado</b></p>
+                    <div>
+                        <span><b>Gold</b></span>
+                    </div>
+                </div>
+                <div class="area diamond" onclick="diamond()">
+                    <p class="prf"><b>Mais Benéfico</b></p>
+                    <div>
+                        <span><b>Diamond</b></span>
+                    </div>
                 </div>
             </div>
-            <div class="area diamond" onclick="diamond()">
-                <p class="prf"><b>Mais Benéfico</b></p>
-                <div>
-                    <span><b>Diamond</b></span>
-                </div>
-            </div>
-        </div>
-    </section>
-    <h2 id="title">Escolha o melhor plano para você</h2>
-    <section class="planos-advantages">
-        <table>
-            <tbody>
-                <tr>
-                    <td>Planos</td>
-                    <td id="silver" class="cube">Silver</td>
-                    <td id="gold" class="cube">Gold</td>
-                    <td id="diamond" class="cube">Diamond</td>
-                </tr>
-                <tr>
-                    <td>Preço por mês</td>
-                    <td>R$19,90</td>
-                    <td>R$34,90</td>
-                    <td>R$55,90</td>
-                </tr>
-                <tr>
-                    <td>Qualidade de Vídeo</td>
-                    <td>Boa</td>
-                    <td>Ótima</td>
-                    <td>A Melhor</td>
-                </tr>
-                <tr>
-                    <td>Resolução de Vídeo</td>
-                    <td>720p</td>
-                    <td>1080p</td>
-                    <td>4K HDR+</td>
-                </tr>
-                <tr>
-                    <td>Downloads</td>
-                    <td></td>
-                    <td><img src="../assets/icons/Star 1.svg" alt="star"></td>
-                    <td><img src="../assets/icons/Star 1.svg" alt="star"></td>
-                </tr>
-                <tr>
-                    <td>Anúncios</td>
-                    <td><img src="../assets/icons/Star 1.svg" alt="star"></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Telas Simultâneas</td>
-                    <td>1 Tela</td>
-                    <td>2 Telas</td>
-                    <td>4 Telas</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-    <footer-1></footer-1>
-    <script>
-        function silver() {
-            window.location.href = '../compras-pages/html/forma-pagamento.html'
-        }
-        function gold() {
-            window.location.href = '../compras-pages/html/forma-pagamento.html'
-        }
-        function diamond() {
-            window.location.href = '../compras-pages/html/forma-pagamento.html'
-        }
-    </script>
-
-</body>
-
+        </section>
+        <h2 id="title">Escolha o melhor plano para você</h2>
+        <section class="planos-advantages">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Planos</td>
+                        <td id="silver" class="cube">Silver</td>
+                        <td id="gold" class="cube">Gold</td>
+                        <td id="diamond" class="cube">Diamond</td>
+                    </tr>
+                    <tr>
+                        <td>Preço por mês</td>
+                        <td>R$19,90</td>
+                        <td>R$34,90</td>
+                        <td>R$55,90</td>
+                    </tr>
+                    <tr>
+                        <td>Qualidade de Vídeo</td>
+                        <td>Boa</td>
+                        <td>Ótima</td>
+                        <td>A Melhor</td>
+                    </tr>
+                    <tr>
+                        <td>Resolução de Vídeo</td>
+                        <td>720p</td>
+                        <td>1080p</td>
+                        <td>4K HDR+</td>
+                    </tr>
+                    <tr>
+                        <td>Downloads</td>
+                        <td></td>
+                        <td>
+                            <img src="../assets/icons/Star 1.svg" alt="star" />
+                        </td>
+                        <td>
+                            <img src="../assets/icons/Star 1.svg" alt="star" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Anúncios</td>
+                        <td>
+                            <img src="../assets/icons/Star 1.svg" alt="star" />
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Telas Simultâneas</td>
+                        <td>1 Tela</td>
+                        <td>2 Telas</td>
+                        <td>4 Telas</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <footer-1></footer-1>
+        <script>
+            function silver() {
+                window.location.href =
+                    "../compras-pages/html/forma-pagamento.html";
+            }
+            function gold() {
+                window.location.href =
+                    "../compras-pages/html/forma-pagamento.html";
+            }
+            function diamond() {
+                window.location.href =
+                    "../compras-pages/html/forma-pagamento.html";
+            }
+        </script>
+    </body>
 </html>
