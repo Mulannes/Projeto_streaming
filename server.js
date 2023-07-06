@@ -30,13 +30,13 @@ app.post("/register", async (req, res) => {
 
   if (!username || !email || !password || !confirmpassword) {
     return res.status(422).json({
-      msg: 'Preencha todos os campos obrigatórios.'
+      msg: '🔴 Preencha todos os campos obrigatórios.'
     });
   }
 
   if (password !== confirmpassword) {
     return res.status(422).json({
-      msg: 'As senhas precisam ser iguais.'
+      msg: '🔴 As senhas precisam ser iguais.'
     });
   }
 
@@ -45,7 +45,7 @@ app.post("/register", async (req, res) => {
 
     if (userExists) {
       return res.status(422).json({
-        msg: 'Esse usuário já está cadastrado.'
+        msg: '🔴 Esse usuário já está cadastrado.'
       });
     }
 
@@ -62,12 +62,12 @@ app.post("/register", async (req, res) => {
     await user.save();
 
     res.status(201).json({
-      msg: 'Usuário cadastrado com sucesso.'
+      msg: '🟢 Usuário cadastrado com sucesso.'
     });
   } catch (error) {
     console.log(`🔴 Error saving user to database: ${error}`);
     res.status(500).json({
-      msg: 'Erro ao salvar o usuário no banco de dados.'
+      msg: '🔴 Erro ao salvar o usuário no banco de dados.'
     });
   }
 });
@@ -78,7 +78,7 @@ app.post("/login", async (req, res) => {
 
   if (!username || !password) {
     return res.status(422).json({
-      msg: 'Preencha todos os campos obrigatórios.'
+      msg: '🔴 Preencha todos os campos obrigatórios.'
     });
   }
 
@@ -87,7 +87,7 @@ app.post("/login", async (req, res) => {
 
     if (!user) {
       return res.status(401).json({
-        msg: 'Credenciais inválidas.'
+        msg: '🔴 Credenciais inválidas.'
       });
     }
 
@@ -95,12 +95,12 @@ app.post("/login", async (req, res) => {
 
     if (!passwordMatch) {
       return res.status(401).json({
-        msg: 'Credenciais inválidas.'
+        msg: '🔴 Credenciais inválidas.'
       });
     }
 
     res.status(200).json({
-      msg: 'Usuário autenticado com sucesso.'
+      msg: '🟢 Usuário autenticado com sucesso.'
     });
   } catch (error) {
     console.log(`🔴 Error finding user in database: ${error}`);
@@ -111,5 +111,5 @@ app.post("/login", async (req, res) => {
 });
 
 app.listen(3002, () => {
-  console.log("Servidor rodando na porta 3002");
+  console.log("🟢 Servidor rodando na porta 3002");
 });
